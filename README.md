@@ -16,7 +16,8 @@ More info:
 
 ### Installing
 
-Create "/home/torrserver/db" directory (for example) on your host, connect host "/home/torrserver/db" directory to the container directory "/TS/db" and start container:
+- сreate "/home/torrserver/db" directory (for example) on your host
+- connect host directory "/home/torrserver/db" to the container directory "/TS/db" and start container:
 ```
 docker pull ksey/torrserver
 docker run --name torrserver -d --restart=always -v /home/torrserver/db:/TS/db  -p 8090:8090  ksey/torrserver
