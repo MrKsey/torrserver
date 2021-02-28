@@ -10,7 +10,10 @@ ENV TS_RELEASE="latest"
 ENV OS="linux"
 ENV TS_PORT="8090"
 
+COPY start_TS.sh /start_TS.sh
+
 RUN export DEBIAN_FRONTEND=noninteractive \
+&& chmod a+x /start_TS.sh \
 && apt-get update && apt-get upgrade -y \
 && apt-get install --no-install-recommends -y ca-certificates wget curl \
 && mkdir -p /TS/db && chmod -R 666 /TS/db && cd /TS \
@@ -29,5 +32,4 @@ VOLUME [ "/TS/db" ]
 
 EXPOSE "$TS_PORT"
 
-ENTRYPOINT ["/TS/TorrServer"]
-CMD ["--path", "/TS/db/", "--port", "$TS_PORT"]
+ENTRYPOINT ["/start_TS.sh"]
