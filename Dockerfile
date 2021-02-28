@@ -2,7 +2,6 @@
 # This is unofficial dockerized precompiled TorrServer
 #
 
-# FROM ubuntu:latest
 FROM debian:stable-slim
 MAINTAINER Bob <kcey@mail.ru>
 
