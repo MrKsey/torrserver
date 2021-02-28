@@ -3,7 +3,7 @@
 
 This is unofficial dockerized precompiled TorrServer within a debian:stable-slim image.
 
-TorrServer, stream torrent to http
+"TorrServer, stream torrent to http"
 
 More info:
 - https://github.com/YouROK/TorrServer
