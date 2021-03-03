@@ -1,6 +1,10 @@
 #!/bin/sh
 
-# [ -f /TS/db/ts.ini ] && source <(grep = /TS/db/ts.ini)
+if [ -f /TS/db/ts.ini ]; then
+    set -a
+    source /TS/db/ts.ini
+    set +a
+fi
 
 if [ "$TS_RELEASE" != "latest" ]; then
     export TS_URL=$TS_URL/tags
