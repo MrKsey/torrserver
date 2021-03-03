@@ -8,9 +8,9 @@ MAINTAINER Bob <kcey@mail.ru>
 ENV TS_URL=https://api.github.com/repos/YouROK/TorrServer/releases
 ENV TS_RELEASE="latest"
 ENV TS_PORT="8090"
-ENV TS_UPDATE="true"
+ENV TS_UPDATE="false"
 ENV LINUX_NAME="linux"
-ENV LINUX_UPDATE="true"
+ENV LINUX_UPDATE="false"
 
 COPY start_TS.sh /start_TS.sh
 COPY update_TS.sh /update_TS.sh
