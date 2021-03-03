@@ -25,4 +25,4 @@ if [ `ps | grep TorrServer | wc -w` -eq 0 ]; then
     /TS/TorrServer --path=/TS/db/ --port=$TS_PORT&
 fi
 
-/bin/sh
+tail -f /dev/null
