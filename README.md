@@ -34,3 +34,8 @@ docker run --name torrserver -d --restart=always -v /home/torrserver/db:/TS/db  
 
 # #
 ### YouROK/TorrServer last 5 commits:
+* 2021-03-03 06:57:02: [YouROK/TorrServer, COMMIT] add free mem
+* 2021-03-03 06:37:04: [YouROK/TorrServer, COMMIT] add release mode
+* 2021-03-03 06:15:48: [YouROK/TorrServer, COMMIT] add log
+* 2021-03-03 06:15:24: [YouROK/TorrServer, COMMIT] update
+* 2021-03-03 06:14:55: [YouROK/TorrServer, COMMIT] remove log
