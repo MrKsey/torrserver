@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ -f /TS/db/ts.ini ]; then
-    source /TS/db/ts.ini
+    . /TS/db/ts.ini
     export $(grep --regexp ^[a-zA-Z] /TS/db/ts.ini | cut -d= -f1)
 fi
 
