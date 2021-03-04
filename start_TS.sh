@@ -1,8 +1,7 @@
 #!/bin/sh
 
 if [ -f /TS/db/ts.ini ]; then
-    . /TS/db/ts.ini
-    export $(grep --regexp ^[a-zA-Z] /TS/db/ts.ini | cut -d= -f1)
+    . /TS/db/ts.ini && export $(grep --regexp ^[a-zA-Z] /TS/db/ts.ini | cut -d= -f1)
 fi
 
 if [ "$TS_RELEASE" != "latest" ]; then
@@ -12,15 +11,17 @@ fi
 
 if $LINUX_UPDATE ; then
     export DEBIAN_FRONTEND=noninteractive
-    apt-get update && apt-get upgrade -y
+    apt-get update && apt-get upgrade -y && apt-get clean
 fi
 
 if $TS_UPDATE ; then
     /update_TS.sh
     if [ ! -z "$cron_task" ]; then
         echo "$cron_task /update_TS.sh" | crontab -
+        service cron start
     else
         crontab -r
+        service cron stop
     fi
 fi
 
