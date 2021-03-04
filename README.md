@@ -33,3 +33,8 @@ docker run --name torrserver -d --restart=always --net=host -v /home/torrserver/
 
 # #
 ### YouROK/TorrServer last 5 commits:
+* 2021-03-03 17:34:10: [YouROK/TorrServer, COMMIT] MatriX.83
+* 2021-03-03 17:33:04: [YouROK/TorrServer, COMMIT] add log
+* 2021-03-03 17:32:49: [YouROK/TorrServer, COMMIT] update
+* 2021-03-03 12:16:06: [YouROK/TorrServer, COMMIT] add err log for accs parse
+* 2021-03-03 12:15:34: [YouROK/TorrServer, COMMIT] disable echo auth
