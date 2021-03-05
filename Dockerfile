@@ -28,8 +28,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
    grep -m 1 -i $LINUX_NAME) \
 && chmod a+x /TS/TorrServer \
 && touch /var/log/cron.log \
-&& ln -sf /dev/stdout /var/log/cron.log \
-&& cron && tail -F /var/log/cron.log 2>&1
+&& ln -sf /dev/stdout /var/log/cron.log
 
 VOLUME [ "/TS/db" ]
 
