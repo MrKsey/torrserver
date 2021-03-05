@@ -21,7 +21,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 && apt-get install --no-install-recommends -y ca-certificates tzdata wget curl procps cron \
 && apt-get clean \
 && mkdir -p /TS/db && chmod -R 666 /TS/db \
-&& wget --output-document=/TS/TorrServer --tries=3 $(curl -s $TS_URL/$TS_RELEASE | \
+&& wget --no-verbose --output-document=/TS/TorrServer --tries=3 $(curl -s $TS_URL/$TS_RELEASE | \
    grep browser_download_url | \
    egrep -o 'http.+\w+' | \
    grep -i "$(dpkg --print-architecture)" | \
