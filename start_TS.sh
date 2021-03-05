@@ -17,7 +17,7 @@ fi
 if $TS_UPDATE ; then
     /update_TS.sh
     if [ ! -z "$cron_task" ]; then
-        echo "$cron_task /update_TS.sh" | crontab -
+        echo "$cron_task /update_TS.sh >> /var/log/cron.log 2>&1" | crontab -
         service cron start
     else
         crontab -r
