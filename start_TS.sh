@@ -17,11 +17,12 @@ fi
 if $TS_UPDATE ; then
     /update_TS.sh
     if [ ! -z "$cron_task" ]; then
+        env > /TS/cron_env.sh && chmod a+rx /TS/cron_env.sh
         echo "$cron_task /update_TS.sh >> /var/log/cron.log 2>&1" | crontab -
-        service cron start
+        cron -f >> /var/log/cron.log 2>&1&
     else
+        pkill cron
         crontab -r
-        service cron stop
     fi
 fi
 
