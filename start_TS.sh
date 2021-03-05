@@ -10,14 +10,19 @@ if [ "$TS_RELEASE" != "latest" ]; then
 fi
 
 if $LINUX_UPDATE ; then
+    echo " "
+    echo "============================================="
+    echo "$(date): Start checking for Linux updates ..."
     export DEBIAN_FRONTEND=noninteractive
     apt-get update && apt-get upgrade -y && apt-get clean
+    echo "Finished checking for Linux updates."
+    echo " "
 fi
 
 if $TS_UPDATE ; then
     /update_TS.sh
     if [ ! -z "$cron_task" ]; then
-        env > /TS/cron_env.sh && chmod a+rx /TS/cron_env.sh
+        env | grep -v cron_task > /TS/cron_env.sh && chmod a+rx /TS/cron_env.sh
         echo "$cron_task /update_TS.sh >> /var/log/cron.log 2>&1" | crontab -
         cron -f >> /var/log/cron.log 2>&1&
     else
