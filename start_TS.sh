@@ -25,9 +25,6 @@ if $TS_UPDATE ; then
         env | grep -v cron_task > /TS/cron_env.sh && chmod a+rx /TS/cron_env.sh
         echo "$cron_task /update_TS.sh >> /var/log/cron.log 2>&1" | crontab -
         cron -f >> /var/log/cron.log 2>&1&
-    else
-        pkill cron
-        crontab -r
     fi
 fi
 
