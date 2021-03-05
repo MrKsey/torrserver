@@ -1,13 +1,12 @@
 #!/bin/sh
 
-echo " "
-echo "======================================="
-echo "$(date): Start checking for updates ..."
-
 if [ -f "/TS/cron_env.sh" ]; then
-    . /TS/cron_env.sh
+    . /TS/cron_env.sh && export $(grep --regexp ^[a-zA-Z] /TS/cron_env.sh | cut -d= -f1)
 fi
 
+echo " "
+echo "=================================================="
+echo "$(date): Start checking for TorrServer updates ..."
 [ -d "/TS/updates" ] && rm -r /TS/updates
 mkdir -p /TS/updates
 wget --no-verbose --output-document=/TS/updates/TorrServer --tries=3 $(curl -s $TS_URL/$TS_RELEASE | grep browser_download_url | egrep -o 'http.+\w+' | grep -i "$(dpkg --print-architecture)" | grep -m 1 -i $LINUX_NAME)
