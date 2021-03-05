@@ -1,7 +1,9 @@
 #!/bin/sh
 
+[ -f "/TS/cron_env.sh" ] && . /TS/cron_env.sh
+
 echo " "
-echo "Start checking for updates ..."
+echo "$(date): Start checking for updates ..."
 [ -d "/TS/updates" ] && rm -r /TS/updates
 mkdir -p /TS/updates
 wget --output-document=/TS/updates/TorrServer --tries=3 $(curl -s $TS_URL/$TS_RELEASE | grep browser_download_url | egrep -o 'http.+\w+' | grep -i "$(dpkg --print-architecture)" | grep -m 1 -i $LINUX_NAME)
