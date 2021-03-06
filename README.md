@@ -23,7 +23,7 @@ More info:
 docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host -v /home/torrserver/db:/TS/db ksey/torrserver
 ```
 
-# #
+
 ### YouROK/TorrServer last 5 commits:
 * 2021-03-04 11:44:47: [YouROK/TorrServer, COMMIT] add data
 * 2021-03-04 08:12:14: [YouROK/TorrServer, COMMIT] remove comments
