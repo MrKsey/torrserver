@@ -29,6 +29,6 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-# #
+
 ### YouROK/TorrServer last 5 commits:
 * 2021-03-05 08:29:40: [YouROK/TorrServer, COMMIT] add def settings
