@@ -46,3 +46,8 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 # #
 ### YouROK/TorrServer last 5 commits:
+* 2021-03-12 07:29:14: [YouROK/TorrServer, COMMIT] add remove views all
+* 2021-03-12 07:29:03: [YouROK/TorrServer, COMMIT] add remove views
+* 2021-03-12 07:13:09: [YouROK/TorrServer, COMMIT] update web
+* 2021-03-11 17:41:05: [YouROK/TorrServer, COMMIT] fix add subs to m3u
+* 2021-03-11 17:19:08: [YouROK/TorrServer, COMMIT] add subs to m3u
