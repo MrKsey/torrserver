@@ -39,8 +39,8 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-03-10 06:10:45: [YouROK/TorrServer, COMMIT] update
-* 2021-03-09 11:38:03: [YouROK/TorrServer, COMMIT] Merge remote-tracking branch 'origin/master'
-* 2021-03-09 11:22:30: [YouROK/TorrServer, COMMIT] update web
-* 2021-03-09 11:19:50: [YouROK/TorrServer, COMMIT] change title
-* 2021-03-09 09:41:17: [YouROK/TorrServer, COMMIT] update
+
+
+
+
+
