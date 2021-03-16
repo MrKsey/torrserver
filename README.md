@@ -52,7 +52,7 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-### YouROK/TorrServer last 5 commits:
+
 * 2021-03-12 12:50:58: [YouROK/TorrServer, COMMIT] change load strategy, thx @antibaks
 * 2021-03-12 12:49:48: [YouROK/TorrServer, COMMIT] fix for samsung tv
 * 2021-03-12 09:09:43: [YouROK/TorrServer, COMMIT] load torrent before send
