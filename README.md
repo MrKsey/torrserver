@@ -70,5 +70,5 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-03-18 13:55:01: [YouROK/TorrServer, COMMIT] fix crash
-* 2021-03-18 13:41:32: [YouROK/TorrServer, COMMIT] fix readahead
+
+
