@@ -74,5 +74,5 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-03-24 12:31:43: [YouROK/TorrServer, COMMIT]  remove title from fname
-* 2021-03-24 12:31:22: [YouROK/TorrServer, COMMIT]  fix empty title
+
+
