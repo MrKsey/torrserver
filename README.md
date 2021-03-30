@@ -78,7 +78,7 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-03-25 13:23:16: [YouROK/TorrServer, COMMIT] use my dht
-* 2021-03-25 08:49:54: [YouROK/TorrServer, COMMIT] fix play without auth
-* 2021-03-25 08:49:54: [YouROK/TorrServer, COMMIT] add example comment
-* 2021-03-25 08:49:53: [YouROK/TorrServer, COMMIT] ignore test dir
+
+
+
+
