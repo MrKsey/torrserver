@@ -83,7 +83,7 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-### YouROK/TorrServer last 5 commits:
+
 * 2021-03-30 07:30:17: [YouROK/TorrServer, COMMIT] Merge pull request #42 from PiRomant/patch-1
 * 2021-03-29 12:07:11: [YouROK/TorrServer, COMMIT] change def conn limit
 * 2021-03-29 12:06:56: [YouROK/TorrServer, COMMIT] remove mutex
