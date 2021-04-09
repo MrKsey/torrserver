@@ -93,8 +93,8 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-04-06 07:43:31: [YouROK/TorrServer, COMMIT] MatriX.87
-* 2021-04-06 07:43:18: [YouROK/TorrServer, COMMIT] formatting
-* 2021-04-06 07:43:07: [YouROK/TorrServer, COMMIT] revert
-* 2021-04-06 07:42:55: [YouROK/TorrServer, COMMIT] revert
-* 2021-04-06 07:31:07: [YouROK/TorrServer, COMMIT] Merge pull request #43 from PiRomant/master
+
+
+
+
+
