@@ -99,7 +99,7 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-### YouROK/TorrServer last 5 commits:
+
 * 2021-04-09 13:14:56: [YouROK/TorrServer, COMMIT] MatriX.88
 * 2021-04-09 13:13:04: [YouROK/TorrServer, COMMIT] update cache map
 * 2021-04-09 11:13:53: [YouROK/TorrServer, COMMIT] MatriX.87.1
