@@ -107,3 +107,4 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 # #
 ### YouROK/TorrServer last 5 commits:
+* 2021-04-12 07:46:29: [YouROK/TorrServer, COMMIT] add playlist to non auth
