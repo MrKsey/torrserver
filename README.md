@@ -110,8 +110,8 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-04-14 13:58:21: [YouROK/TorrServer, COMMIT] change no auth status
-* 2021-04-14 11:35:07: [YouROK/TorrServer, COMMIT] MatriX.89
-* 2021-04-14 11:28:58: [YouROK/TorrServer, COMMIT] MatriX.88.2
-* 2021-04-14 11:25:35: [YouROK/TorrServer, COMMIT] fix m3u auth
-* 2021-04-13 08:01:34: [YouROK/TorrServer, COMMIT] MatriX.88.1
+
+
+
+
+
