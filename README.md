@@ -117,6 +117,6 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-04-15 12:50:59: [YouROK/TorrServer, COMMIT] MatriX.90
-* 2021-04-15 07:18:46: [YouROK/TorrServer, COMMIT] fix m3u file no auth
-* 2021-04-15 07:18:24: [YouROK/TorrServer, COMMIT] remove status after send file
+
+
+
