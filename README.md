@@ -132,3 +132,7 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 # #
 ### YouROK/TorrServer last 5 commits:
+* 2021-04-23 08:11:37: [YouROK/TorrServer, COMMIT] fix http redirect to magnet
+* 2021-04-23 07:33:13: [YouROK/TorrServer, COMMIT] log local ip on start
+* 2021-04-23 07:17:57: [YouROK/TorrServer, COMMIT] add white/black ip list
+* 2021-04-23 07:17:45: [YouROK/TorrServer, COMMIT] add white/black ip list
