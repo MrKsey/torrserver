@@ -4,11 +4,32 @@ if [ -f "/TS/cron_env.sh" ]; then
     . /TS/cron_env.sh && export $(grep --regexp ^[a-zA-Z] /TS/cron_env.sh | cut -d= -f1)
 fi
 
+[ -d "/TS/updates" ] && rm -r /TS/updates
+mkdir -p /TS/updates
+
+if [ ! -z "$BIP_URL" ]; then
+    echo " "
+    echo "=================================================="
+    echo "$(date): Start checking for blacklist ip updates ..."
+    wget -q --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:77.0) Gecko/20100101 Firefox/77.0" --content-disposition "$BIP_URL" -O - | gunzip | egrep -v '^#' > /TS/updates/bip.txt
+    bip_size=$(wc -l /TS/updates/bip.txt | cut -f 1 -d ' ')
+    if [ $bip_size -gt 0 ]; then
+        cp -f /TS/updates/bip.txt /TS/db/bip.txt
+        chmod a+r /TS/db/bip.txt
+        echo "New bip.txt size: $bip_size strings. Restarting TorrServer..."
+        pkill TorrServer
+        /TS/TorrServer --path=/TS/db/ --port=$TS_PORT&
+    else
+        echo "Error updating blacklist ip from URL - $BIP_URL"
+    fi
+    echo "Finished checking for updates."
+    echo "=================================================="
+    echo " "
+fi
+
 echo " "
 echo "=================================================="
 echo "$(date): Start checking for TorrServer updates ..."
-[ -d "/TS/updates" ] && rm -r /TS/updates
-mkdir -p /TS/updates
 wget --no-verbose --output-document=/TS/updates/TorrServer --tries=3 $(curl -s $TS_URL/$TS_RELEASE | grep browser_download_url | egrep -o 'http.+\w+' | grep -i "$(dpkg --print-architecture)" | grep -m 1 -i $LINUX_NAME)
 chmod a+x /TS/updates/TorrServer
 updated_ver=$(/TS/updates/TorrServer --version)
@@ -41,4 +62,5 @@ else
     echo "Error during the update process: no internet access or the downloaded file is corrupted."
 fi
 echo "Finished checking for updates."
+echo "=================================================="
 echo " "
