@@ -4,11 +4,6 @@ if [ -f "/TS/db/ts.ini" ]; then
     . /TS/db/ts.ini && export $(grep --regexp ^[a-zA-Z] /TS/db/ts.ini | cut -d= -f1)
 fi
 
-if [ "$TS_RELEASE" != "latest" ]; then
-    export TS_URL=$TS_URL/tags
-    export cron_task=""
-fi
-
 if $LINUX_UPDATE ; then
     echo " "
     echo "============================================="
@@ -19,13 +14,18 @@ if $LINUX_UPDATE ; then
     echo " "
 fi
 
+if [ "$TS_RELEASE" != "latest" ]; then
+    export TS_URL=$TS_URL/tags
+fi
+
 if $TS_UPDATE ; then
     . /update_TS.sh
-    if [ ! -z "$cron_task" ]; then
-        env | grep -v cron_task > /TS/cron_env.sh && chmod a+rx /TS/cron_env.sh
-        echo "$cron_task /update_TS.sh >> /var/log/cron.log 2>&1" | crontab -
-        cron -f >> /var/log/cron.log 2>&1&
-    fi
+fi
+
+if [ ! -z "$cron_task" ]; then
+    env | grep -v cron_task > /TS/cron_env.sh && chmod a+rx /TS/cron_env.sh
+    echo "$cron_task /update_TS.sh >> /var/log/cron.log 2>&1" | crontab -
+    cron -f >> /var/log/cron.log 2>&1&
 fi
 
 if [ `ps | grep TorrServer | wc -w` -eq 0 ]; then
