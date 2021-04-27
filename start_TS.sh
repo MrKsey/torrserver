@@ -11,6 +11,7 @@ if $LINUX_UPDATE ; then
     export DEBIAN_FRONTEND=noninteractive
     apt-get update && apt-get upgrade -y && apt-get clean
     echo "Finished checking for Linux updates."
+    echo "============================================="
     echo " "
 fi
 
