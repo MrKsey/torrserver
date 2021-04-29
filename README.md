@@ -149,5 +149,5 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-04-27 18:33:41: [YouROK/TorrServer, COMMIT] init remake
-* 2021-04-27 18:33:26: [YouROK/TorrServer, COMMIT] update
+
+
