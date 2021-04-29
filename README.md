@@ -153,3 +153,8 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 # #
 ### YouROK/TorrServer last 5 commits:
+* 2021-04-29 08:35:40: [YouROK/TorrServer, COMMIT] fix log rewrite
+* 2021-04-28 13:48:02: [YouROK/TorrServer, COMMIT] MatriX.92.1
+* 2021-04-28 13:29:54: [YouROK/TorrServer, COMMIT] revert clean cache
+* 2021-04-28 13:28:59: [YouROK/TorrServer, COMMIT] change compile prior
+* 2021-04-28 13:26:37: [YouROK/TorrServer, COMMIT] Merge pull request #47 from qarkai/issue-45
