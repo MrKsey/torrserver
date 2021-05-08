@@ -159,6 +159,6 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-### YouROK/TorrServer last 5 commits:
+
 * 2021-05-05 17:37:26: [YouROK/TorrServer, COMMIT] MatriX.93
 * 2021-05-05 17:36:47: [YouROK/TorrServer, COMMIT] dont preload if reader in begin of file
