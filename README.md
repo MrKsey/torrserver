@@ -167,3 +167,8 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 # #
 ### YouROK/TorrServer last 5 commits:
+* 2021-05-08 18:55:40: [YouROK/TorrServer, COMMIT] Merge remote-tracking branch 'origin/master'
+* 2021-05-08 18:42:35: [YouROK/TorrServer, COMMIT] add html settings disk cache
+* 2021-05-08 18:42:20: [YouROK/TorrServer, COMMIT] add html settings disk cache
+* 2021-05-08 18:41:04: [YouROK/TorrServer, COMMIT] refactor and add disk cache
+* 2021-05-08 18:39:49: [YouROK/TorrServer, COMMIT] refactor and add disk cache
