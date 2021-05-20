@@ -174,8 +174,8 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-05-17 08:55:29: [YouROK/TorrServer, COMMIT] MatriX.93.2
-* 2021-05-17 08:54:56: [YouROK/TorrServer, COMMIT] change disk cache
-* 2021-05-17 08:53:49: [YouROK/TorrServer, COMMIT] update web
-* 2021-05-17 08:53:14: [YouROK/TorrServer, COMMIT] add upload speed
-* 2021-05-17 08:52:54: [YouROK/TorrServer, COMMIT] fix readonly disk sets
+
+
+
+
+
