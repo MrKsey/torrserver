@@ -185,3 +185,8 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 # #
 ### YouROK/TorrServer last 5 commits:
+* 2021-05-25 07:28:43: [YouROK/TorrServer, COMMIT] add play
+* 2021-05-25 07:25:13: [YouROK/TorrServer, COMMIT] add play
+* 2021-05-25 07:25:01: [YouROK/TorrServer, COMMIT] update web
+* 2021-05-25 07:24:43: [YouROK/TorrServer, COMMIT] add play link
+* 2021-05-25 06:02:27: [YouROK/TorrServer, COMMIT] fix load in memory cache
