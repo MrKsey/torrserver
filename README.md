@@ -181,5 +181,5 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-05-20 08:29:24: [YouROK/TorrServer, COMMIT] MatriX.93.3
-* 2021-05-20 08:12:44: [YouROK/TorrServer, COMMIT] fix crash
+
+
