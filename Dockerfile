@@ -3,7 +3,7 @@
 #
 
 # FROM debian:stable-slim
-FROM ubuntu:latest
+FROM ubuntu:groovy
 MAINTAINER Bob <kcey@mail.ru>
 
 ENV TS_URL=https://api.github.com/repos/YouROK/TorrServer/releases
