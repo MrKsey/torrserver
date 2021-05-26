@@ -2,7 +2,8 @@
 # This is unofficial dockerized precompiled TorrServer
 #
 
-FROM debian:stable-slim
+# FROM debian:stable-slim
+FROM ubuntu:latest
 MAINTAINER Bob <kcey@mail.ru>
 
 ENV TS_URL=https://api.github.com/repos/YouROK/TorrServer/releases
