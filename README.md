@@ -191,7 +191,7 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-### YouROK/TorrServer last 5 commits:
+
 * 2021-05-26 09:56:31: [YouROK/TorrServer, COMMIT] update web
 * 2021-05-26 09:36:47: [YouROK/TorrServer, COMMIT] fix max size length
 * 2021-05-26 09:32:15: [YouROK/TorrServer, COMMIT] fix max size length
