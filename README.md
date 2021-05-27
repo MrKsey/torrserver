@@ -192,8 +192,8 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-05-26 09:56:31: [YouROK/TorrServer, COMMIT] update web
-* 2021-05-26 09:36:47: [YouROK/TorrServer, COMMIT] fix max size length
-* 2021-05-26 09:32:15: [YouROK/TorrServer, COMMIT] fix max size length
-* 2021-05-26 09:13:32: [YouROK/TorrServer, COMMIT] MatriX.95
-* 2021-05-26 09:13:19: [YouROK/TorrServer, COMMIT] add CGO_ENABLED=0 in compile
+
+
+
+
+
