@@ -1,10 +1,10 @@
 #!/bin/sh
 
-if [ -f "/TS/cron_env.sh" ]; then
+if [ -e /TS/cron_env.sh ]; then
     . /TS/cron_env.sh && export $(grep --regexp ^[a-zA-Z] /TS/cron_env.sh | cut -d= -f1)
 fi
 
-[ -d "/TS/updates" ] && rm -r /TS/updates
+[ -d /TS/updates ] && rm -r /TS/updates
 mkdir -p /TS/updates
 
 if [ ! -z "$BIP_URL" ]; then
@@ -37,10 +37,10 @@ if [ $? -eq 0 -a ! -z "$updated_ver" ]; then
     current_ver=$(/TS/TorrServer --version)
     if [ "$updated_ver" != "$current_ver" ]; then
         echo "Updating to $updated_ver ..."
-        if [ ! -d "/TS/db/backup" ]; then
+        if [ ! -d /TS/db/backup ]; then
             mkdir -p /TS/db/backup
         else
-            [ -f "/TS/db/backup/TorrServer" ] && rm -f /TS/db/backup/TorrServer
+            [ -e /TS/db/backup/TorrServer ] && rm -f /TS/db/backup/TorrServer
         fi 
         pkill TorrServer
         cp -f /TS/TorrServer /TS/db/backup/
