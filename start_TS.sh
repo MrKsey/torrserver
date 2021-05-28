@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ -f "/TS/db/ts.ini" ]; then
+if [ -e /TS/db/ts.ini ]; then
     . /TS/db/ts.ini && export $(grep --regexp ^[a-zA-Z] /TS/db/ts.ini | cut -d= -f1)
 fi
 
@@ -23,7 +23,7 @@ if $TS_UPDATE ; then
     . /update_TS.sh
 fi
 
-if [ -f "/TS/cron_env.sh" ]; then
+if [ -e /TS/cron_env.sh ]; then
     rm -f /TS/cron_env.sh
 fi
 
@@ -38,7 +38,7 @@ if [ `ps | grep TorrServer | wc -w` -eq 0 ]; then
     sleep 5
     if [ `ps | grep TorrServer | wc -w` -eq 0 ]; then
         echo "Current TorrServer file is corrupted. Trying to restore backup."
-        if [ -f "/TS/db/backup/TorrServer" ]; then
+        if [ -e /TS/db/backup/TorrServer ]; then
             rm -f /TS/TorrServer
             cp -f /TS/db/backup/TorrServer /TS/TorrServer
             chmod a+x /TS/TorrServer
