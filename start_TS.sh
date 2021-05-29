@@ -23,12 +23,12 @@ if $TS_UPDATE ; then
     . /update_TS.sh
 fi
 
-if [ -e /TS/cron_env.sh ]; then
-    rm -f /TS/cron_env.sh
+if [ -e /TS/cron.env ]; then
+    rm -f /TS/cron.env
 fi
 
 if [ ! -z "$cron_task" ]; then
-    env | grep -v cron_task > /TS/cron_env.sh && chmod a+rx /TS/cron_env.sh
+    env | grep -v cron_task > /TS/cron.env && chmod a+r /TS/cron.env
     echo "$cron_task /update_TS.sh >> /var/log/cron.log 2>&1" | crontab -
     cron -f >> /var/log/cron.log 2>&1&
 fi
