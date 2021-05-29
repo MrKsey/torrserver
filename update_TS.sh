@@ -1,7 +1,9 @@
 #!/bin/sh
 
-if [ -e /TS/cron_env.sh ]; then
-    . /TS/cron_env.sh && export $(grep --regexp ^[a-zA-Z] /TS/cron_env.sh | cut -d= -f1)
+if [ -e /TS/cron.env ]; then
+    for line in $(cat /TS/cron.env); do
+        eval export '$line'
+    done
 fi
 
 [ -d /TS/updates ] && rm -r /TS/updates
