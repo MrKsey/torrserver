@@ -205,3 +205,5 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 # #
 ### YouROK/TorrServer last 5 commits:
+* 2021-05-31 06:34:24: [YouROK/TorrServer, COMMIT] add magnet export
+* 2021-05-31 06:05:48: [YouROK/TorrServer, COMMIT] fix crash
