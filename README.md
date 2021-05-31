@@ -199,7 +199,7 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-05-27 09:33:29: [YouROK/TorrServer, COMMIT] revert reader state
-* 2021-05-27 08:15:33: [YouROK/TorrServer, COMMIT] fix warning with key
-* 2021-05-27 05:54:47: [YouROK/TorrServer, COMMIT] fix reader pause if count 1
-* 2021-05-27 05:34:19: [YouROK/TorrServer, COMMIT] add reader stat to torrent stat
+
+
+
+
