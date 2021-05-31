@@ -1,9 +1,7 @@
 #!/bin/sh
 
 if [ -e /TS/cron.env ]; then
-    for line in $(cat /TS/cron.env); do
-        eval export '$line'
-    done
+    set -a; . /TS/cron.env; set +a
 fi
 
 [ -d /TS/updates ] && rm -r /TS/updates
