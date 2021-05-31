@@ -1,6 +1,12 @@
 #!/bin/sh
 
+export INI_URL="https://raw.githubusercontent.com/MrKsey/torrserver/main/ts.ini"
+if [ ! -e /TS/db/ts.ini ]; then
+    wget -q --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:77.0) Gecko/20100101 Firefox/77.0" --content-disposition "$INI_URL" -O /TS/db/ts.ini
+fi
+
 if [ -e /TS/db/ts.ini ]; then
+    chmod a+r /TS/db/ts.ini
     . /TS/db/ts.ini && export $(grep --regexp ^[a-zA-Z] /TS/db/ts.ini | cut -d= -f1)
 fi
 
