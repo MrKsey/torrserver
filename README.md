@@ -28,8 +28,8 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-06-01 12:59:14: [YouROK/TorrServer, COMMIT] release pieces on torrent drop
-* 2021-06-01 11:52:27: [YouROK/TorrServer, COMMIT] MatriX.96
-* 2021-06-01 09:23:59: [YouROK/TorrServer, COMMIT] Update README.md
-* 2021-06-01 09:11:58: [YouROK/TorrServer, COMMIT] update web
-* 2021-06-01 09:11:47: [YouROK/TorrServer, COMMIT] set disk cache as mem cache
+
+
+
+
+
