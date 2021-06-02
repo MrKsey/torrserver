@@ -13,6 +13,19 @@ if [ ! -e /TS/db/ts.ini ]; then
     fi
 fi
 
+# File accs.db source. Do not change!
+export ACCS_URL="https://raw.githubusercontent.com/MrKsey/torrserver/main/accs.db"
+if [ ! -e /TS/db/accs.db ]; then
+    wget -q --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:77.0) Gecko/20100101 Firefox/77.0" --content-disposition "$ACCS_URL" -O /TS/db/accs.db
+    if [ -e /TS/db/accs.db ]; then
+        echo " "
+        echo "============================================="
+        echo "$(date): File /TS/db/accs.db downloaded from the github."
+        echo "============================================="
+        echo " "
+    fi
+fi
+
 if [ -e /TS/db/ts.ini ]; then
     chmod a+r /TS/db/ts.ini
     . /TS/db/ts.ini && export $(grep --regexp ^[a-zA-Z] /TS/db/ts.ini | cut -d= -f1)
