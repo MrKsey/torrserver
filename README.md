@@ -14,7 +14,7 @@ More info:
 ### Requirements
 
 * server with docker
-* ~128 Mb RAM, ~1 Gb for disk cashe 
+* ~256 Mb RAM, ~512 Mb disk space 
 
 ### Installing
 
@@ -22,7 +22,7 @@ More info:
 - (optional) put ["ts.ini"](https://raw.githubusercontent.com/MrKsey/torrserver/master/ts.ini) file to "/home/torrserver/db", uncomment the desired options. The "cron_task" parameter (in the cron format) is used to start updates on a schedule. Parameters from "ts.ini" file overwrites the default parameters.
 - connect host directory "/home/torrserver/db" to the container directory "/TS/db" and start container:
 ```
-docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host -v /home/torrserver/db:/TS/db ksey/torrserver
+docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host -v /torrserver/db:/TS/db ksey/torrserver
 ```
 
 
