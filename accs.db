@@ -1,0 +1,11 @@
+# File: accs.db for docker container ksey/torrserver
+# This is example of basic access authentication configuration: "login": "password".
+# To enable authentication:
+# 1) Change login/password and put this file to ../db directory (near config.db)
+# 2) In ts.ini file uncomment and set TS_OPTIONS="-a"
+# 3) Restart container
+
+{
+"admin": "TS_admin123",
+"user": "TS_user456"
+}
