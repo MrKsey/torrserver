@@ -2,9 +2,13 @@
 # This is unofficial dockerized precompiled TorrServer
 #
 
-FROM debian:stable-slim
+# For new library glibc >=2.32 use Ubuntu Groovy or newer
 # FROM ubuntu:groovy
+FROM debian:stable-slim
 MAINTAINER Bob <kcey@mail.ru>
+
+# On linux systems you need to set this environment variable before run:
+ENV GODEBUG="madvdontneed=1"
 
 ENV TS_URL=https://api.github.com/repos/YouROK/TorrServer/releases
 ENV TS_RELEASE="latest"
