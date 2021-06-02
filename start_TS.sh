@@ -1,13 +1,28 @@
 #!/bin/sh
 
+# Configuration file ts.ini source. Do not change!
 export INI_URL="https://raw.githubusercontent.com/MrKsey/torrserver/main/ts.ini"
 if [ ! -e /TS/db/ts.ini ]; then
     wget -q --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:77.0) Gecko/20100101 Firefox/77.0" --content-disposition "$INI_URL" -O /TS/db/ts.ini
+    if [ -e /TS/db/ts.ini ]; then
+        echo " "
+        echo "============================================="
+        echo "$(date): File /TS/db/ts.ini downloaded from the github."
+        echo "============================================="
+        echo " "
+    fi
 fi
 
 if [ -e /TS/db/ts.ini ]; then
     chmod a+r /TS/db/ts.ini
     . /TS/db/ts.ini && export $(grep --regexp ^[a-zA-Z] /TS/db/ts.ini | cut -d= -f1)
+    echo "============================================="
+    echo "$(date): Configuration settings from ts.ini file:"
+    echo " "
+    echo "$(cat /TS/db/ts.ini | grep --regexp ^[a-zA-Z])"
+    echo " "
+    echo "============================================="
+    echo " "
 fi
 
 if [ -e /TS/cron.env ]; then
@@ -25,6 +40,10 @@ if $LINUX_UPDATE ; then
     echo " "
 fi
 
+echo " "
+echo "============================================="
+echo "$(date): Starting TorrServer ..."
+echo " "
 /TS/TorrServer --path=/TS/db/ --port=$TS_PORT $TS_OPTIONS &
 sleep 5
 if [ `ps | grep TorrServer | wc -w` -eq 0 ]; then
@@ -69,6 +88,11 @@ fi
 if [ ! -z "$cron_task" ]; then
     echo "$cron_task /update_TS.sh >> /var/log/cron.log 2>&1" | crontab -
     cron -f >> /var/log/cron.log 2>&1&
+    echo " "
+    echo "============================================="
+    echo "$(date): Cron task set to: $(crontab -l)"
+    echo "============================================="
+    echo " "
 fi
 
 tail -f /dev/null
