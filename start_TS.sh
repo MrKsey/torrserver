@@ -13,6 +13,18 @@ if [ ! -e /TS/db/ts.ini ]; then
     fi
 fi
 
+if [ -e /TS/db/ts.ini ]; then
+    chmod a+r /TS/db/ts.ini
+    . /TS/db/ts.ini && export $(grep --regexp ^[a-zA-Z] /TS/db/ts.ini | cut -d= -f1)
+    echo "============================================="
+    echo "$(date): Configuration settings from ts.ini file:"
+    echo " "
+    echo "$(cat /TS/db/ts.ini | grep --regexp ^[a-zA-Z])"
+    echo " "
+    echo "============================================="
+    echo " "
+fi
+
 # File accs.db source. Do not change!
 export ACCS_URL="https://raw.githubusercontent.com/MrKsey/torrserver/main/accs.db"
 if [ ! -e /TS/db/accs.db ]; then
@@ -26,18 +38,7 @@ if [ ! -e /TS/db/accs.db ]; then
     fi
 fi
 
-if [ -e /TS/db/ts.ini ]; then
-    chmod a+r /TS/db/ts.ini
-    . /TS/db/ts.ini && export $(grep --regexp ^[a-zA-Z] /TS/db/ts.ini | cut -d= -f1)
-    echo "============================================="
-    echo "$(date): Configuration settings from ts.ini file:"
-    echo " "
-    echo "$(cat /TS/db/ts.ini | grep --regexp ^[a-zA-Z])"
-    echo " "
-    echo "============================================="
-    echo " "
-fi
-
+# Cleanup env settings
 if [ -e /TS/cron.env ]; then
     rm -f /TS/cron.env
 fi
