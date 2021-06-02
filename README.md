@@ -27,7 +27,7 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-### YouROK/TorrServer last 5 commits:
+
 * 2021-06-01 12:59:14: [YouROK/TorrServer, COMMIT] release pieces on torrent drop
 * 2021-06-01 11:52:27: [YouROK/TorrServer, COMMIT] MatriX.96
 * 2021-06-01 09:23:59: [YouROK/TorrServer, COMMIT] Update README.md
