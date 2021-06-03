@@ -35,5 +35,5 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-06-01 20:05:53: [YouROK/TorrServer, COMMIT] revert delete on drop
-* 2021-06-01 18:58:24: [YouROK/TorrServer, COMMIT] fix freeze on close
+
+
