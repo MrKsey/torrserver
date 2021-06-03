@@ -39,3 +39,8 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 # #
 ### YouROK/TorrServer last 5 commits:
+* 2021-06-03 13:59:37: [YouROK/TorrServer, COMMIT] update web
+* 2021-06-03 13:57:35: [YouROK/TorrServer, COMMIT] fix bug and add readahead, need fix bug with end preload
+* 2021-06-03 12:47:46: [YouROK/TorrServer, COMMIT] Merge remote-tracking branch 'origin/master'
+* 2021-06-03 12:35:19: [YouROK/TorrServer, COMMIT] refactor
+* 2021-06-03 12:33:46: [YouROK/TorrServer, COMMIT] refactor
