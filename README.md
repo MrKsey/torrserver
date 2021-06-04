@@ -46,3 +46,8 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 # #
 ### YouROK/TorrServer last 5 commits:
+* 2021-06-03 17:08:10: [YouROK/TorrServer, COMMIT] Merge branch 'master' of https://github.com/YouROK/TorrServer
+* 2021-06-03 17:08:07: [YouROK/TorrServer, COMMIT] host detection fixed in prod mode
+* 2021-06-03 17:05:39: [YouROK/TorrServer, COMMIT] MatriX.97
+* 2021-06-03 17:05:31: [YouROK/TorrServer, COMMIT] update web page
+* 2021-06-03 16:56:40: [YouROK/TorrServer, COMMIT] revert some
