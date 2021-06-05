@@ -15,6 +15,7 @@ fi
 
 if [ -e /TS/db/ts.ini ]; then
     chmod a+r /TS/db/ts.ini
+    sed -i -e "s/\r//g" /TS/db/ts.ini
     . /TS/db/ts.ini && export $(grep --regexp ^[a-zA-Z] /TS/db/ts.ini | cut -d= -f1)
     echo "============================================="
     echo "$(date): Configuration settings from ts.ini file:"
