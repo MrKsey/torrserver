@@ -53,8 +53,8 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-06-04 22:50:19: [YouROK/TorrServer, COMMIT] husky removed
-* 2021-06-04 22:40:57: [YouROK/TorrServer, COMMIT] test
-* 2021-06-04 22:40:13: [YouROK/TorrServer, COMMIT] test3
-* 2021-06-04 22:36:24: [YouROK/TorrServer, COMMIT] test2
-* 2021-06-04 22:33:01: [YouROK/TorrServer, COMMIT] test
+
+
+
+
+
