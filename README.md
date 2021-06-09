@@ -60,8 +60,8 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-06-07 12:24:26: [YouROK/TorrServer, COMMIT] Merge pull request #65 from tsynik/i18n-update
-* 2021-06-07 11:12:58: [YouROK/TorrServer, COMMIT] disable use disk on empty path
-* 2021-06-07 01:15:19: [YouROK/TorrServer, COMMIT] Update translation.json
-* 2021-06-06 22:24:17: [YouROK/TorrServer, COMMIT] some i18n fixes and update
-* 2021-06-06 19:44:36: [YouROK/TorrServer, COMMIT] refactor
+
+
+
+
+
