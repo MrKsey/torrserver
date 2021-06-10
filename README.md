@@ -67,8 +67,8 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-06-08 16:38:49: [YouROK/TorrServer, COMMIT] MatriX.98
-* 2021-06-08 16:38:26: [YouROK/TorrServer, COMMIT] add docker compile
-* 2021-06-08 16:37:53: [YouROK/TorrServer, COMMIT] update web
-* 2021-06-08 08:16:29: [YouROK/TorrServer, COMMIT] Merge pull request #67 from tsynik/i18n-update
-* 2021-06-07 16:03:36: [YouROK/TorrServer, COMMIT] translate donate snackbar and torrent states
+
+
+
+
+
