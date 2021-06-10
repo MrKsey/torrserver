@@ -74,3 +74,8 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 # #
 ### YouROK/TorrServer last 5 commits:
+* 2021-06-09 22:13:16: [YouROK/TorrServer, COMMIT] added rusian regex to ptt.parse
+* 2021-06-09 18:08:21: [YouROK/TorrServer, COMMIT] Merge branch 'upload-file-dialog'
+* 2021-06-09 18:07:02: [YouROK/TorrServer, COMMIT] refactor
+* 2021-06-09 17:59:50: [YouROK/TorrServer, COMMIT] regex fixed
+* 2021-06-09 17:52:38: [YouROK/TorrServer, COMMIT] regex fixed
