@@ -81,8 +81,8 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-06-11 05:47:27: [YouROK/TorrServer, COMMIT] update web
-* 2021-06-11 05:47:15: [YouROK/TorrServer, COMMIT] add en images
-* 2021-06-10 20:51:06: [YouROK/TorrServer, COMMIT] Merge branch 'addDialog-refactor'
-* 2021-06-10 20:46:00: [YouROK/TorrServer, COMMIT] refactor
-* 2021-06-10 20:18:36: [YouROK/TorrServer, COMMIT] refactor
+
+
+
+
+
