@@ -80,7 +80,7 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-### YouROK/TorrServer last 5 commits:
+
 * 2021-06-11 05:47:27: [YouROK/TorrServer, COMMIT] update web
 * 2021-06-11 05:47:15: [YouROK/TorrServer, COMMIT] add en images
 * 2021-06-10 20:51:06: [YouROK/TorrServer, COMMIT] Merge branch 'addDialog-refactor'
