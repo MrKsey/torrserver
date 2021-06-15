@@ -92,3 +92,8 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 # #
 ### YouROK/TorrServer last 5 commits:
+* 2021-06-14 21:27:21: [YouROK/TorrServer, COMMIT] Merge branch 'small-changes'
+* 2021-06-14 21:24:11: [YouROK/TorrServer, COMMIT] name and title has new function for parsing
+* 2021-06-14 20:13:27: [YouROK/TorrServer, COMMIT] edit torrents function added
+* 2021-06-14 17:36:07: [YouROK/TorrServer, COMMIT] added regex to delete last "/" from server url in settings dialog
+* 2021-06-14 17:00:30: [YouROK/TorrServer, COMMIT] added react-query
