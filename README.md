@@ -99,8 +99,8 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-06-15 15:09:21: [YouROK/TorrServer, COMMIT] Merge branch 'snake-fix'
-* 2021-06-15 15:05:45: [YouROK/TorrServer, COMMIT] refactor
-* 2021-06-15 14:24:36: [YouROK/TorrServer, COMMIT] notification fixed
-* 2021-06-15 14:03:12: [YouROK/TorrServer, COMMIT] all snakes are div's now again
-* 2021-06-15 08:10:18: [YouROK/TorrServer, COMMIT] Merge branch 'master' into snake-fix
+
+
+
+
+
