@@ -106,5 +106,5 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-06-17 07:10:05: [YouROK/TorrServer, COMMIT] add search folder .tsc for cache
-* 2021-06-16 08:34:00: [YouROK/TorrServer, COMMIT] fixed title in short table
+
+
