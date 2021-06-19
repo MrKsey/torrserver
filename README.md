@@ -117,3 +117,8 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 # #
 ### YouROK/TorrServer last 5 commits:
+* 2021-06-19 01:03:46: [YouROK/TorrServer, COMMIT] refactor
+* 2021-06-19 01:03:25: [YouROK/TorrServer, COMMIT] color change
+* 2021-06-19 00:49:13: [YouROK/TorrServer, COMMIT] Merge pull request #78 from YouROK/canvas-snake
+* 2021-06-19 00:44:54: [YouROK/TorrServer, COMMIT] created object for separate snake settings
+* 2021-06-18 23:58:54: [YouROK/TorrServer, COMMIT] refactor
