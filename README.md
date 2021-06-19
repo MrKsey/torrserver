@@ -110,8 +110,8 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-06-17 20:53:45: [YouROK/TorrServer, COMMIT] html fix
-* 2021-06-17 16:19:29: [YouROK/TorrServer, COMMIT] added icons for noserver or no files
-* 2021-06-17 14:50:45: [YouROK/TorrServer, COMMIT] refactor
-* 2021-06-17 13:45:24: [YouROK/TorrServer, COMMIT] Merge branch 'details-in-card-and-add-dialog-title-change'
-* 2021-06-17 12:48:06: [YouROK/TorrServer, COMMIT] fixed title, font changed
+
+
+
+
+
