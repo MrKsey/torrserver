@@ -135,6 +135,6 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-06-22 06:45:11: [YouROK/TorrServer, COMMIT] update web
-* 2021-06-22 06:44:57: [YouROK/TorrServer, COMMIT] remove cache on start
-* 2021-06-22 05:38:53: [YouROK/TorrServer, COMMIT] fix remove cache file
+
+
+
