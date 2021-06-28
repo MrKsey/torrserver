@@ -143,8 +143,8 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-06-26 19:31:30: [YouROK/TorrServer, COMMIT] Merge branch 'dark-light-theme'
-* 2021-06-26 19:28:50: [YouROK/TorrServer, COMMIT] refactor
-* 2021-06-26 18:52:33: [YouROK/TorrServer, COMMIT] refactor
-* 2021-06-26 18:52:14: [YouROK/TorrServer, COMMIT] refactor
-* 2021-06-26 18:47:33: [YouROK/TorrServer, COMMIT] added theme switcher
+
+
+
+
+
