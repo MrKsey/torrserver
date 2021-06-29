@@ -150,6 +150,6 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-06-28 15:57:51: [YouROK/TorrServer, COMMIT] refactor
-* 2021-06-28 15:15:08: [YouROK/TorrServer, COMMIT] about dialog updated
-* 2021-06-28 09:47:27: [YouROK/TorrServer, COMMIT] dark mode widget colors change
+
+
+
