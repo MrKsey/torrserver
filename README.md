@@ -155,5 +155,5 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-06-29 13:07:48: [YouROK/TorrServer, COMMIT] refactor
-* 2021-06-29 08:10:14: [YouROK/TorrServer, COMMIT] about dialog updated
+
+
