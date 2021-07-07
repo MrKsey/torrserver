@@ -162,8 +162,8 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-07-06 12:45:52: [YouROK/TorrServer, COMMIT] Merge branch 'settings-dialog'
-* 2021-07-06 12:44:20: [YouROK/TorrServer, COMMIT] colors fixed
-* 2021-07-06 11:38:10: [YouROK/TorrServer, COMMIT] refactor
-* 2021-07-06 11:23:19: [YouROK/TorrServer, COMMIT] adaptive design added
-* 2021-07-05 21:31:13: [YouROK/TorrServer, COMMIT] refactor
+
+
+
+
+
