@@ -176,3 +176,8 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 # #
 ### YouROK/TorrServer last 5 commits:
+* 2021-07-09 11:16:37: [YouROK/TorrServer, COMMIT] Update index.jsx
+* 2021-07-09 10:27:31: [YouROK/TorrServer, COMMIT] Update index.html
+* 2021-07-09 10:09:11: [YouROK/TorrServer, COMMIT] Delete safari-pinned-tab.svg
+* 2021-07-09 10:01:00: [YouROK/TorrServer, COMMIT] remove bad safari mask
+* 2021-07-09 09:43:25: [YouROK/TorrServer, COMMIT] Merge remote-tracking branch 'origin/master'
