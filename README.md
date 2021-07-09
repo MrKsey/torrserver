@@ -173,4 +173,4 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-07-07 21:50:47: [YouROK/TorrServer, COMMIT] update translations and About
+
