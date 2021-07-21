@@ -183,8 +183,8 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-07-11 14:18:45: [YouROK/TorrServer, COMMIT] update web
-* 2021-07-11 14:15:16: [YouROK/TorrServer, COMMIT] rem PreloadBuffer, add PreloadCache
-* 2021-07-11 14:14:51: [YouROK/TorrServer, COMMIT] change preload
-* 2021-07-11 14:14:27: [YouROK/TorrServer, COMMIT] add PreloadCache, change ReaderReadAHead
-* 2021-07-11 14:13:57: [YouROK/TorrServer, COMMIT] add preload cache, need remove PreloadBuffer
+
+
+
+
+
