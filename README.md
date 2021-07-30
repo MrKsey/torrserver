@@ -199,6 +199,6 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-### YouROK/TorrServer last 5 commits:
+
 * 2021-07-22 21:42:26: [YouROK/TorrServer, COMMIT] update web
 * 2021-07-22 21:41:59: [YouROK/TorrServer, COMMIT] change cache max value to 1TB and increase steps
