@@ -203,7 +203,7 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-### YouROK/TorrServer last 5 commits:
+
 * 2021-07-30 01:54:53: [YouROK/TorrServer, COMMIT] adjust widgets padding
 * 2021-07-30 00:41:06: [YouROK/TorrServer, COMMIT] use smaller font for widgets and avoid wraps
 * 2021-07-29 14:15:31: [YouROK/TorrServer, COMMIT] remove unused js
