@@ -219,7 +219,7 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-### YouROK/TorrServer last 5 commits:
+
 * 2021-08-10 06:33:08: [YouROK/TorrServer, COMMIT] relaxed image check
 * 2021-08-10 06:32:10: [YouROK/TorrServer, COMMIT] Update translation.json
 * 2021-08-10 05:49:24: [YouROK/TorrServer, COMMIT] update settings translation
