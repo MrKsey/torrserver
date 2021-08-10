@@ -213,8 +213,8 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-08-09 05:52:45: [YouROK/TorrServer, COMMIT] cleanup
-* 2021-08-09 05:24:21: [YouROK/TorrServer, COMMIT] prefer dn over name with empty title
-* 2021-08-09 01:31:10: [YouROK/TorrServer, COMMIT] update logging
-* 2021-08-08 23:13:40: [YouROK/TorrServer, COMMIT] add UpnpID
-* 2021-08-08 22:40:48: [YouROK/TorrServer, COMMIT] update web
+
+
+
+
+
