@@ -229,3 +229,7 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 # #
 ### YouROK/TorrServer last 5 commits:
+* 2021-08-12 12:00:47: [YouROK/TorrServer, COMMIT] update torrent to v1.30.1
+* 2021-08-12 01:19:27: [YouROK/TorrServer, COMMIT] update torrent to v1.30.0
+* 2021-08-12 01:18:48: [YouROK/TorrServer, COMMIT] use upx compression for binaries
+* 2021-08-12 01:16:36: [YouROK/TorrServer, COMMIT] use softfloat on mips builds
