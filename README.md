@@ -235,5 +235,5 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-08-13 22:37:56: [YouROK/TorrServer, COMMIT] update web
-* 2021-08-13 22:01:01: [YouROK/TorrServer, COMMIT] update torrent to v1.30.2
+
+
