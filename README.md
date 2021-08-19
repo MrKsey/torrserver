@@ -256,7 +256,7 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-### YouROK/TorrServer last 5 commits:
+
 * 2021-08-18 03:17:17: [YouROK/TorrServer, COMMIT] revert
 * 2021-08-18 02:08:30: [YouROK/TorrServer, COMMIT] fix typo
 * 2021-08-18 01:35:05: [YouROK/TorrServer, COMMIT] improve priority logic
