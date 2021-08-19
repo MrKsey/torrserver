@@ -257,8 +257,8 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-08-18 03:17:17: [YouROK/TorrServer, COMMIT] revert
-* 2021-08-18 02:08:30: [YouROK/TorrServer, COMMIT] fix typo
-* 2021-08-18 01:35:05: [YouROK/TorrServer, COMMIT] improve priority logic
-* 2021-08-17 23:19:45: [YouROK/TorrServer, COMMIT] update web
-* 2021-08-17 23:16:35: [YouROK/TorrServer, COMMIT] unify snake across themes and close button
+
+
+
+
+
