@@ -264,8 +264,8 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-08-19 09:12:26: [YouROK/TorrServer, COMMIT] fix prioritise
-* 2021-08-19 07:38:28: [YouROK/TorrServer, COMMIT] go get -u for torrent v1.30.3 release
-* 2021-08-19 06:41:45: [YouROK/TorrServer, COMMIT] update libs
-* 2021-08-19 06:40:57: [YouROK/TorrServer, COMMIT] Merge remote-tracking branch 'origin/master'
-* 2021-08-19 05:59:21: [YouROK/TorrServer, COMMIT] change cache priority logic
+
+
+
+
+
