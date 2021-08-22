@@ -278,8 +278,8 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-08-21 12:54:04: [YouROK/TorrServer, COMMIT] Merge pull request #93 from YouROK/old-good-engine
-* 2021-08-21 11:07:48: [YouROK/TorrServer, COMMIT] update web
-* 2021-08-21 11:07:03: [YouROK/TorrServer, COMMIT] sync torrent repo
-* 2021-08-21 07:40:22: [YouROK/TorrServer, COMMIT] fix read a head on not readed reader
-* 2021-08-21 06:59:09: [YouROK/TorrServer, COMMIT] test old engine with DHT v2
+
+
+
+
+
