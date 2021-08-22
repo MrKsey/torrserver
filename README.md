@@ -277,7 +277,7 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-### YouROK/TorrServer last 5 commits:
+
 * 2021-08-21 12:54:04: [YouROK/TorrServer, COMMIT] Merge pull request #93 from YouROK/old-good-engine
 * 2021-08-21 11:07:48: [YouROK/TorrServer, COMMIT] update web
 * 2021-08-21 11:07:03: [YouROK/TorrServer, COMMIT] sync torrent repo
