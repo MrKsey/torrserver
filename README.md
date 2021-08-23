@@ -284,7 +284,7 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-### YouROK/TorrServer last 5 commits:
+
 * 2021-08-22 09:04:39: [YouROK/TorrServer, COMMIT] add mutex on api
 * 2021-08-22 09:00:52: [YouROK/TorrServer, COMMIT] Merge remote-tracking branch 'origin/master'
 * 2021-08-22 08:18:52: [YouROK/TorrServer, COMMIT] fix rewind and update wrappers
