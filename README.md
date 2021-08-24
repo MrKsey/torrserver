@@ -291,7 +291,7 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-### YouROK/TorrServer last 5 commits:
+
 * 2021-08-22 17:45:46: [YouROK/TorrServer, COMMIT] docker golang 1.17.0
 * 2021-08-22 17:43:56: [YouROK/TorrServer, COMMIT] MatriX.104
 * 2021-08-22 17:41:28: [YouROK/TorrServer, COMMIT] remove comment
