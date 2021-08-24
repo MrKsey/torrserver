@@ -299,3 +299,8 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 # #
 ### YouROK/TorrServer last 5 commits:
+* 2021-08-24 07:13:35: [YouROK/TorrServer, COMMIT] Revert "optimise peace.release()"
+* 2021-08-24 05:52:25: [YouROK/TorrServer, COMMIT] optimise peace.release()
+* 2021-08-23 21:38:14: [YouROK/TorrServer, COMMIT] update web
+* 2021-08-23 21:35:27: [YouROK/TorrServer, COMMIT] fix checkbox on dark theme and respect mini too
+* 2021-08-23 17:27:58: [YouROK/TorrServer, COMMIT] update web translations
