@@ -306,4 +306,4 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-08-25 11:12:13: [YouROK/TorrServer, COMMIT] ugly hack to disable IP banning on rewind back
+
