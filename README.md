@@ -309,8 +309,8 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-08-26 11:14:42: [YouROK/TorrServer, COMMIT] dlna icons: looks like order matters
-* 2021-08-26 09:16:12: [YouROK/TorrServer, COMMIT] update libs
-* 2021-08-26 08:27:02: [YouROK/TorrServer, COMMIT] update static web
-* 2021-08-26 08:26:29: [YouROK/TorrServer, COMMIT] disable check hashes on save urls
-* 2021-08-26 04:15:34: [YouROK/TorrServer, COMMIT] update translations
+
+
+
+
+
