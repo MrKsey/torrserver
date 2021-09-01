@@ -318,7 +318,7 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-### YouROK/TorrServer last 5 commits:
+
 * 2021-08-27 16:11:05: [YouROK/TorrServer, COMMIT] remove locks
 * 2021-08-27 15:20:02: [YouROK/TorrServer, COMMIT] increase TotalHalfOpenConns
 * 2021-08-27 14:42:23: [YouROK/TorrServer, COMMIT] refactor dlna mimetypes
