@@ -35,7 +35,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 && touch /var/log/cron.log \
 && ln -sf /proc/1/fd/1 /var/log/cron.log
 
-HEALTHCHECK --interval=5s --timeout=10s --retries=3 CMD curl -sS 127.0.0.1:8090 || exit 1
+HEALTHCHECK --interval=5s --timeout=10s --retries=3 CMD curl -sS 127.0.0.1:$TS_PORT || exit 1
 
 VOLUME [ "/TS/db" ]
 
