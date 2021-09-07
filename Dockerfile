@@ -4,7 +4,8 @@
 
 # For new library glibc >=2.32 use Ubuntu Groovy or newer
 # FROM ubuntu:groovy
-FROM debian:stable-slim
+# FROM debian:stable-slim
+FROM ubuntu:latest
 MAINTAINER Bob <kcey@mail.ru>
 
 # On linux systems you need to set this environment variable before run:
