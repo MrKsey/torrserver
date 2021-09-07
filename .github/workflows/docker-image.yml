@@ -11,15 +11,16 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    
+    env:
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        REPO_NAME: ${{ github.event.repository.name }}
 
     steps:
     - uses: actions/checkout@v2
     
     - name: Build the Docker image
-      env:
-        DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
-        DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
-        REPO_NAME: ${{github.event.repository.name}}
       run: docker build . --file Dockerfile --tag $DOCKER_USERNAME/$REPO_NAME
       
     - name: Docker login
