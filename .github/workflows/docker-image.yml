@@ -16,15 +16,14 @@ jobs:
     - uses: actions/checkout@v2
     
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag torrserver
-      
-    - name: Docker login
       env:
         DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+        REPO_NAME: ${{github.event.repository.name}}
+      run: docker build . --file Dockerfile --tag $DOCKER_USERNAME/$REPO_NAME
+      
+    - name: Docker login
       run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
     
     - name: Docker push
-      env:
-        DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
-      run: docker push $DOCKER_USERNAME/torrserver
+      run: docker push $DOCKER_USERNAME/$REPO_NAME
