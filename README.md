@@ -26,3 +26,8 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 ```
 # #
 ### YouROK/TorrServer last 5 commits:
+* 2021-09-09 23:07:32: [YouROK/TorrServer, COMMIT] to reduce git diff overhead
+* 2021-09-09 09:40:23: [YouROK/TorrServer, COMMIT] gofmt -l -w .
+* 2021-09-09 09:32:31: [YouROK/TorrServer, COMMIT] Merge branch 'master' of https://github.com/YouROK/TorrServer
+* 2021-09-09 09:32:20: [YouROK/TorrServer, COMMIT] according rclone tests it should have dc:date element
+* 2021-09-09 09:30:11: [YouROK/TorrServer, COMMIT] MatriX.106
