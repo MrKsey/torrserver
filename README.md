@@ -25,7 +25,7 @@ More info:
 docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host -v /torrserver/db:/TS/db ksey/torrserver
 ```
 
-### YouROK/TorrServer last 5 commits:
+
 * 2021-09-09 23:07:32: [YouROK/TorrServer, COMMIT] to reduce git diff overhead
 * 2021-09-09 09:40:23: [YouROK/TorrServer, COMMIT] gofmt -l -w .
 * 2021-09-09 09:32:31: [YouROK/TorrServer, COMMIT] Merge branch 'master' of https://github.com/YouROK/TorrServer
