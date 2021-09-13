@@ -32,7 +32,7 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-### YouROK/TorrServer last 5 commits:
+
 * 2021-09-11 20:08:51: [YouROK/TorrServer, COMMIT] return NoSuchObject in case no meta
 * 2021-09-11 19:50:56: [YouROK/TorrServer, COMMIT] gofmt -l -w .
 * 2021-09-11 19:48:07: [YouROK/TorrServer, COMMIT] rework torrents meta response
