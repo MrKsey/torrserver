@@ -39,6 +39,6 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-### YouROK/TorrServer last 5 commits:
+
 * 2021-09-12 23:39:45: [YouROK/TorrServer, COMMIT] add some iface fun and don't start dlna on loopback and tunnels
 * 2021-09-12 21:37:56: [YouROK/TorrServer, COMMIT] change meta response
