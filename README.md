@@ -51,3 +51,8 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 # #
 ### YouROK/TorrServer last 5 commits:
+* 2021-09-20 14:42:11: [YouROK/TorrServer, COMMIT] update web
+* 2021-09-20 14:36:17: [YouROK/TorrServer, COMMIT] fix msx build and some changes
+* 2021-09-20 13:46:14: [YouROK/TorrServer, COMMIT] Merge pull request #116 from skunkie/issue-115
+* 2021-09-20 13:45:59: [YouROK/TorrServer, COMMIT] Merge pull request #113 from kolsys/msx-native
+* 2021-09-20 13:16:05: [YouROK/TorrServer, COMMIT] fix a delay when saving settings
