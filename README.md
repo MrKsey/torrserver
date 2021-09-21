@@ -44,8 +44,8 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-09-13 19:28:50: [YouROK/TorrServer, COMMIT] move meta objects to getTorrentMeta
-* 2021-09-13 16:39:55: [YouROK/TorrServer, COMMIT] skip loopback and tunnels for dlna
-* 2021-09-13 16:28:05: [YouROK/TorrServer, COMMIT] Update list.go
-* 2021-09-13 16:25:45: [YouROK/TorrServer, COMMIT] Revert "return NoSuchObject in case no meta"
-* 2021-09-13 16:25:40: [YouROK/TorrServer, COMMIT] Revert "change meta response"
+
+
+
+
+
