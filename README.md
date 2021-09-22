@@ -58,3 +58,5 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 # #
 ### YouROK/TorrServer last 5 commits:
+* 2021-09-21 12:38:45: [YouROK/TorrServer, COMMIT] update gen_web and modules
+* 2021-09-21 12:08:55: [YouROK/TorrServer, COMMIT] gofmt -l -w
