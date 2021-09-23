@@ -62,3 +62,7 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 # #
 ### YouROK/TorrServer last 5 commits:
+* 2021-09-22 19:02:42: [YouROK/TorrServer, COMMIT] just format
+* 2021-09-22 11:54:08: [YouROK/TorrServer, COMMIT] add files info to data on add to db
+* 2021-09-22 11:34:19: [YouROK/TorrServer, COMMIT] add sort files
+* 2021-09-22 11:30:20: [YouROK/TorrServer, COMMIT] add qiwi
