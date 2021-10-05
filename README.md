@@ -68,5 +68,5 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-* 2021-10-01 05:39:17: [YouROK/TorrServer, COMMIT] Merge pull request #118 from kolsys/msx-native
-* 2021-09-26 11:38:37: [YouROK/TorrServer, COMMIT] WebOS audio tracks support
+
+
