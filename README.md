@@ -71,7 +71,7 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 
 
-### YouROK/TorrServer last 5 commits:
+
 * 2021-10-04 13:43:14: [YouROK/TorrServer, COMMIT] remove checks android ndk, see readme
 * 2021-10-04 12:57:01: [YouROK/TorrServer, COMMIT] remove unused
 * 2021-10-04 12:51:25: [YouROK/TorrServer, COMMIT] update web
