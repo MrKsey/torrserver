@@ -79,3 +79,6 @@ docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host 
 
 # #
 ### YouROK/TorrServer last 5 commits:
+* 2021-10-07 19:14:18: [YouROK/TorrServer, COMMIT] update dms to master
+* 2021-10-07 18:59:23: [YouROK/TorrServer, COMMIT] torrent mod update
+* 2021-10-07 18:34:42: [YouROK/TorrServer, COMMIT] torrent: mute reader errors
