@@ -90,10 +90,6 @@ if [ `ps | grep TorrServer | wc -w` -eq 0 ]; then
     fi
 fi
 
-if [ "$TS_RELEASE" != "latest" ]; then
-    export TS_URL=$TS_URL/tags
-fi
-
 env | grep -v cron_task | awk 'NF {sub("=","=\"",$0); print ""$0"\""}' > /TS/cron.env && chmod a+r /TS/cron.env
 
 if $TS_UPDATE ; then
