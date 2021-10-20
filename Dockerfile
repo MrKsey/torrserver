@@ -11,8 +11,9 @@ MAINTAINER Bob <kcey@mail.ru>
 # On linux systems you need to set this environment variable before run:
 ENV GODEBUG="madvdontneed=1"
 
-ENV TS_URL=https://api.github.com/repos/YouROK/TorrServer/releases
-ENV TS_RELEASE="latest"
+# ENV TS_URL=https://api.github.com/repos/YouROK/TorrServer/releases
+ENV TS_URL=https://releases.yourok.ru/torr/server_release.json
+#ENV TS_RELEASE="latest"
 ENV TS_PORT="8090"
 ENV TS_UPDATE="true"
 ENV LINUX_NAME="linux"
@@ -27,8 +28,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 && apt-get install --no-install-recommends -y ca-certificates tzdata wget curl procps cron \
 && apt-get clean \
 && mkdir -p /TS/db && chmod -R 666 /TS/db \
-&& wget --no-verbose --output-document=/TS/TorrServer --tries=3 $(curl -s $TS_URL/$TS_RELEASE | \
-   grep browser_download_url | \
+&& wget --no-verbose --output-document=/TS/TorrServer --tries=3 $(curl -s $TS_URL | \
    egrep -o 'http.+\w+' | \
    grep -i "$(dpkg --print-architecture)" | \
    grep -m 1 -i $LINUX_NAME) \
