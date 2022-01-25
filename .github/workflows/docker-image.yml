@@ -25,6 +25,9 @@ jobs:
         string: ${{ github.event.repository.name }}
     - run: echo "REPO_NAME=$(echo "${{ steps.string.outputs.lowercase }}")" >> $GITHUB_ENV
     
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@v1
+    
     - name: Set up Docker Buildx
       id: buildx
       uses: docker/setup-buildx-action@v1
