@@ -9,7 +9,7 @@ This is unofficial dockerized precompiled TorrServer within a debian:stable-slim
 
 More info:
 - https://github.com/YouROK/TorrServer
-- https://4pda.ru/forum/index.php?showtopic=889960
+- https://4pda.to/forum/index.php?showtopic=889960
 
 ### Requirements
 
