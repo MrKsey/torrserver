@@ -25,8 +25,12 @@ jobs:
         string: ${{ github.event.repository.name }}
     - run: echo "REPO_NAME=$(echo "${{ steps.string.outputs.lowercase }}")" >> $GITHUB_ENV
     
+    - name: Set up Docker Buildx
+      id: buildx
+      uses: docker/setup-buildx-action@v1
+          
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag $DOCKER_USERNAME/$REPO_NAME
+      run: docker buildx build . --file Dockerfile --tag $DOCKER_USERNAME/$REPO_NAME --platform linux/amd64,linux/arm64
       
     - name: Docker login
       run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
