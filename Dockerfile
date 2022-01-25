@@ -16,7 +16,6 @@ ENV TS_URL=https://releases.yourok.ru/torr/server_release.json
 #ENV TS_RELEASE="latest"
 ENV TS_PORT="8090"
 ENV TS_UPDATE="true"
-ENV LINUX_NAME="linux"
 ENV LINUX_UPDATE="true"
 
 COPY start_TS.sh /start_TS.sh
@@ -31,7 +30,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 && wget --no-verbose --output-document=/TS/TorrServer --tries=3 $(curl -s $TS_URL | \
    egrep -o 'http.+\w+' | \
    grep -i "$(dpkg --print-architecture)" | \
-   grep -m 1 -i $LINUX_NAME) \
+   grep -m 1 -i "$(uname | tr '[:upper:]' '[:lower:]')") \
 && chmod a+x /TS/TorrServer \
 && touch /var/log/cron.log \
 && ln -sf /proc/1/fd/1 /var/log/cron.log
