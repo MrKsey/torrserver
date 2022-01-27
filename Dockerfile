@@ -30,7 +30,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 && wget --no-check-certificate --no-verbose --output-document=/TS/TorrServer --tries=3 $(curl -s $TS_URL | \
    egrep -o 'http.+\w+' | \
    grep -i "$(uname)" | \
-   grep -i "$(dpkg --print-architecture | tr -s "hf" 7)"$) \
+   grep -i "$(dpkg --print-architecture | tr -s armhf arm7 | tr -s i386 386)"$) \
 && chmod a+x /TS/TorrServer \
 && touch /var/log/cron.log \
 && ln -sf /proc/1/fd/1 /var/log/cron.log
