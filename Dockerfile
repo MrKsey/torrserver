@@ -29,7 +29,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 && mkdir -p /TS/db && chmod -R 666 /TS/db \
 && wget --no-verbose --output-document=/TS/TorrServer --tries=3 $(curl -s $TS_URL | \
    egrep -o 'http.+\w+' | \
-   grep -i "$(uname)" \
+   grep -i "$(uname)" | \
    grep -i "$(dpkg --print-architecture | tr -s "hf" 7)"$) \
 && chmod a+x /TS/TorrServer \
 && touch /var/log/cron.log \
