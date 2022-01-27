@@ -36,5 +36,5 @@ jobs:
       run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
       
     - name: Build the Docker image
-      run: docker buildx build . --push --file Dockerfile --tag $DOCKER_USERNAME/$REPO_NAME --platform linux/amd64,linux/arm64,linux/arm/v7,linux/386
+      run: docker buildx build . --push --file Dockerfile --tag $DOCKER_USERNAME/$REPO_NAME --platform linux/amd64,linux/arm64,linux/arm/v7
       
