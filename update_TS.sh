@@ -30,7 +30,7 @@ fi
 echo " "
 echo "=================================================="
 echo "$(date): Start checking for TorrServer updates ..."
-wget --no-verbose --output-document=/TS/updates/TorrServer --tries=3 $(curl -s $TS_URL | egrep -o 'http.+\w+' | grep -i "$(dpkg --print-architecture)" | grep -m 1 -i "$(uname)")
+wget --no-verbose --output-document=/TS/updates/TorrServer --tries=3 $(curl -s $TS_URL | egrep -o 'http.+\w+' | grep -i "$(uname)" | grep -i "$(dpkg --print-architecture | tr -s "hf" 7)")
 chmod a+x /TS/updates/TorrServer
 updated_ver=$(/TS/updates/TorrServer --version)
 if [ $? -eq 0 -a ! -z "$updated_ver" ]; then
