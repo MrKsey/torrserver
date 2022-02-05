@@ -11,7 +11,9 @@ if [ ! -z "$BIP_URL" ]; then
     echo " "
     echo "=================================================="
     echo "$(date): Start checking for blacklist ip updates ..."
-    wget -q --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:77.0) Gecko/20100101 Firefox/77.0" --content-disposition "$BIP_URL" -O - | gunzip | egrep -v '^#' > /TS/updates/bip.txt
+    wget -q --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:77.0) Gecko/20100101 Firefox/77.0" --content-disposition "$BIP_URL" -O - | \
+    gunzip | egrep -v '^#' | tr -d "[:blank:]" | \
+    egrep -o '([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}-[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}|[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})' > /TS/updates/bip.txt
     bip_size=$(wc -l /TS/updates/bip.txt | cut -f 1 -d ' ')
     if [ $bip_size -gt 0 ]; then
         cp -f /TS/updates/bip.txt /TS/db/bip.txt
