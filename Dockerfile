@@ -24,7 +24,7 @@ COPY update_TS.sh /update_TS.sh
 RUN export DEBIAN_FRONTEND=noninteractive \
 && chmod a+x /start_TS.sh && chmod a+x /update_TS.sh \
 && apt-get update && apt-get upgrade -y \
-&& apt-get install --no-install-recommends -y ca-certificates tzdata wget curl procps cron \
+&& apt-get install --no-install-recommends -y ca-certificates tzdata wget curl procps cron file \
 && apt-get clean \
 && mkdir -p /TS/db && chmod -R 666 /TS/db \
 && wget --no-check-certificate --no-verbose --output-document=/TS/TorrServer --tries=3 $(curl -s $TS_URL | \
