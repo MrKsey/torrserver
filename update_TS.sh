@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Sleep a random number of seconds before executing a task (1 - 40 sec.)
+sleep $((RANDOM % 40))
+
 if [ -e /TS/cron.env ]; then
     set -a; . /TS/cron.env; set +a
 fi
