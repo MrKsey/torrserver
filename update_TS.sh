@@ -24,6 +24,8 @@ if [ ! -z "$BIP_URL" ]; then
     egrep -o '([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}-[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}|[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})' | \
     sed -r 's/0*([0-9]+)\.0*([0-9]+)\.0*([0-9]+)\.0*([0-9]+)/\1.\2.\3.\4/g' > /TS/updates/bip.txt
     
+    rm -f /TS/updates/bip_raw.$EXT
+    
     bip_size=$(wc -l /TS/updates/bip.txt | cut -f 1 -d ' ')
     if [ $bip_size -gt 0 ]; then
         cp -f /TS/updates/bip.txt /TS/db/bip.txt
