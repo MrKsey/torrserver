@@ -18,8 +18,7 @@ if [ ! -z "$BIP_URL" ]; then
     cd /TS/updates
     
     EXT=$(basename $(wget -nv --spider --no-check-certificate --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:77.0) Gecko/20100101 Firefox/77.0" \
-    --content-disposition "$BIP_URL" -O - 2>&1 | \
-    egrep -o 'http.+\w+' | cut -f 1 -d " ") | egrep -o '[^.]*$')
+    --content-disposition "$BIP_URL" -O - 2>&1 | egrep -o 'http.+\w+' | cut -f 1 -d " ") | egrep -o '[^.]*$')
     
     wget -nv --no-check-certificate --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:77.0) Gecko/20100101 Firefox/77.0" \
     --content-disposition "$BIP_URL" --output-document=bip_raw.$EXT
