@@ -29,7 +29,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 && apt-get install --no-install-recommends -y ca-certificates tzdata wget curl procps cron file \
 && apt-get clean \
 && mkdir -p /TS/db && chmod -R 666 /TS/db \
-&& wget --no-check-certificate --no-verbose --output-document=/TS/TorrServer --tries=3 $(curl -s $TS_URL | \
+&& wget --no-check-certificate --user-agent="$USER_AGENT" --no-verbose --output-document=/TS/TorrServer --tries=3 $(curl -s $TS_URL | \
    egrep -o 'http.+\w+' | \
    grep -i "$(uname)" | \
    grep -i "$(dpkg --print-architecture | tr -s armhf arm7 | tr -s i386 386)"$) \
