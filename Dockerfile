@@ -15,7 +15,7 @@ ENV TS_UPDATE="true"
 ENV LINUX_UPDATE="true"
 
 ENV GIT_URL=https://api.github.com/repos/YouROK/TorrServer/releases
-ENV USER_AGENT="Mozilla/5.0 (X11; Linux x86_64; rv:77.0) Gecko/20100101 Firefox/77.0""
+ENV USER_AGENT="Mozilla/5.0 (X11; Linux x86_64; rv:77.0) Gecko/20100101 Firefox/77.0"
 
 # On linux systems you need to set this environment variable before run:
 ENV GODEBUG="madvdontneed=1"
