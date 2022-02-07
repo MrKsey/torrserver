@@ -3,7 +3,7 @@
 # Configuration file ts.ini source. Do not change!
 export INI_URL="https://raw.githubusercontent.com/MrKsey/torrserver/main/ts.ini"
 if [ ! -e /TS/db/ts.ini ]; then
-    wget -q --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:77.0) Gecko/20100101 Firefox/77.0" --content-disposition "$INI_URL" -O /TS/db/ts.ini
+    wget -q --user-agent=$USER_AGENT --content-disposition "$INI_URL" -O /TS/db/ts.ini
     if [ -e /TS/db/ts.ini ]; then
         echo " "
         echo "============================================="
@@ -29,7 +29,7 @@ fi
 # File accs.db source. Do not change!
 export ACCS_URL="https://raw.githubusercontent.com/MrKsey/torrserver/main/accs.db"
 if [ ! -e /TS/db/accs.db ]; then
-    wget -q --user-agent="Mozilla/5.0 (X11; Linux x86_64; rv:77.0) Gecko/20100101 Firefox/77.0" --content-disposition "$ACCS_URL" -O /TS/db/accs.db
+    wget -q --user-agent=$USER_AGENT --content-disposition "$ACCS_URL" -O /TS/db/accs.db
     if [ -e /TS/db/accs.db ]; then
         echo " "
         echo "============================================="
