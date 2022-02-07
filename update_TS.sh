@@ -17,10 +17,10 @@ if [ ! -z "$BIP_URL" ]; then
     
     cd /TS/updates
     
-    EXT=$(basename $(wget -nv --spider --no-check-certificate --user-agent=$USER_AGENT \
+    EXT=$(basename $(wget -nv --spider --no-check-certificate --user-agent="$USER_AGENT" \
     --content-disposition "$BIP_URL" -O - 2>&1 | egrep -o 'http.+\w+' | cut -f 1 -d " ") | egrep -o '[^.]*$')
     
-    wget -nv --no-check-certificate --user-agent=$USER_AGENT \
+    wget -nv --no-check-certificate --user-agent="$USER_AGENT" \
     --content-disposition "$BIP_URL" --output-document=bip_raw.$EXT
     
     file -b --mime-type bip_raw.$EXT | ( grep -q 'text/plain' && cat bip_raw.$EXT 2>&1 || gunzip -c bip_raw.$EXT) | \
@@ -52,7 +52,7 @@ fi
 echo " "
 echo "=================================================="
 echo "$(date): Start checking for TorrServer updates ..."
-wget --no-check-certificate --no-verbose --output-document=/TS/updates/TorrServer --tries=3 $(curl -s $TS_URL | \
+wget --no-check-certificate --no-verbose --user-agent="$USER_AGENT" --output-document=/TS/updates/TorrServer --tries=3 $(curl -s $TS_URL | \
 egrep -o 'http.+\w+' | \
 grep -i "$(uname)" | \
 grep -i "$(dpkg --print-architecture | tr -s armhf arm7 | tr -s i386 386)"$)
