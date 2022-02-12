@@ -59,12 +59,12 @@ if $INSTALL_FFPROBE ; then
     if [ $(dpkg-query -W -f='${Status}' ffmpeg 2>/dev/null | grep -c "ok installed") -eq 0 ] ; then
         echo " "
         echo "============================================="
-        echo "$(date): Installing ffprobe (ffmpeg) ..."
+        echo "$(date): Installing ffprobe (ffmpeg). 800 MB of additional disk space will be used."
         export DEBIAN_FRONTEND=noninteractive
-        apt update && apt upgrade -y
-        apt install ffmpeg
-        apt clean
-        echo "Finished checking for Linux updates."
+        apt-get update && apt-get upgrade -y
+        apt-get install --no-install-recommends -y ffmpeg
+        apt-get clean
+        echo "Finished installing ffprobe (ffmpeg)."
         echo "============================================="
         echo " "
     fi
