@@ -56,15 +56,18 @@ if $LINUX_UPDATE ; then
 fi
 
 if $INSTALL_FFPROBE ; then
-    echo " "
-    echo "============================================="
-    echo "$(date): Installing ffprobe (ffmpeg) ..."
-    export DEBIAN_FRONTEND=noninteractive
-    apt update && apt upgrade -y && apt-get clean
-    apt install ffmpeg
-    echo "Finished checking for Linux updates."
-    echo "============================================="
-    echo " "
+    if [ $(dpkg-query -W -f='${Status}' ffmpeg 2>/dev/null | grep -c "ok installed") -eq 0 ] ; then
+        echo " "
+        echo "============================================="
+        echo "$(date): Installing ffprobe (ffmpeg) ..."
+        export DEBIAN_FRONTEND=noninteractive
+        apt update && apt upgrade -y
+        apt install ffmpeg
+        apt clean
+        echo "Finished checking for Linux updates."
+        echo "============================================="
+        echo " "
+    fi
 fi
 
 echo " "
