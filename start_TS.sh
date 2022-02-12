@@ -55,6 +55,18 @@ if $LINUX_UPDATE ; then
     echo " "
 fi
 
+if $INSTALL_FFPROBE ; then
+    echo " "
+    echo "============================================="
+    echo "$(date): Installing ffprobe (ffmpeg) ..."
+    export DEBIAN_FRONTEND=noninteractive
+    apt update && apt upgrade -y && apt-get clean
+    apt install ffmpeg
+    echo "Finished checking for Linux updates."
+    echo "============================================="
+    echo " "
+fi
+
 echo " "
 echo "============================================="
 echo "$(date): Starting TorrServer ..."
