@@ -1,16 +1,5 @@
 #!/bin/sh
 
-if [ -e /TS/cron.env ]; then
-    set -a; . /TS/cron.env; set +a
-fi
-
-if [ "$USER_AGENT" == "Mozilla/5.0 (X11; Linux x86_64; rv:77.0) Gecko/20100101 Firefox/77.0" ]; then
-    UA=$(curl -s --location --request GET 'https://api.promptapi.com/user_agent/generate?desktop=true&linux=true' --header 'apikey: W7mQND1aUUb3k2ZVQDSVaMNwGQ8c4Y2C' | jq ".ua")
-    if [ "$UA" != "null" ] ; then
-        export USER_AGENT=$UA
-    fi
-fi
-
 # Configuration file ts.ini source. Do not change!
 export INI_URL="https://raw.githubusercontent.com/MrKsey/torrserver/main/ts.ini"
 if [ ! -e /TS/db/ts.ini ]; then
@@ -64,21 +53,6 @@ if $LINUX_UPDATE ; then
     echo "Finished checking for Linux updates."
     echo "============================================="
     echo " "
-fi
-
-if $INSTALL_FFPROBE ; then
-    if [ $(dpkg-query -W -f='${Status}' ffmpeg 2>/dev/null | grep -c "ok installed") -eq 0 ] ; then
-        echo " "
-        echo "============================================="
-        echo "$(date): Installing ffprobe (ffmpeg). 800 MB of additional disk space will be used."
-        export DEBIAN_FRONTEND=noninteractive
-        apt-get update && apt-get upgrade -y
-        apt-get install --no-install-recommends -y ffmpeg
-        apt-get clean
-        echo "Finished installing ffprobe (ffmpeg)."
-        echo "============================================="
-        echo " "
-    fi
 fi
 
 echo " "
