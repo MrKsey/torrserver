@@ -1,5 +1,16 @@
 #!/bin/sh
 
+if [ -e /TS/cron.env ]; then
+    set -a; . /TS/cron.env; set +a
+fi
+
+if [ "$USER_AGENT" == "Mozilla/5.0 (X11; Linux x86_64; rv:77.0) Gecko/20100101 Firefox/77.0" ] ; then
+    UA=$(curl -s --location --request GET 'https://api.promptapi.com/user_agent/generate?desktop=true&linux=true' --header 'apikey: W7mQND1aUUb3k2ZVQDSVaMNwGQ8c4Y2C' | jq ".ua")
+    if [ "$UA" != "null" ] ; then
+        export USER_AGENT=$UA
+    fi
+fi
+
 # Configuration file ts.ini source. Do not change!
 export INI_URL="https://raw.githubusercontent.com/MrKsey/torrserver/main/ts.ini"
 if [ ! -e /TS/db/ts.ini ]; then
