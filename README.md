@@ -22,5 +22,5 @@ More info:
 - (optional) put ["ts.ini"](https://raw.githubusercontent.com/MrKsey/torrserver/master/ts.ini) file to "/torrserver/db", uncomment the desired options. The "cron_task" parameter (in the cron format) is used to start updates on a schedule. Parameters from "ts.ini" file overwrites the default parameters.
 - connect host directory "/torrserver/db" to the container directory "/TS/db" and start container:
 ```
-docker run --name torrserver -e TZ=Europe/Moscow -d --restart=always --net=host -v /torrserver/db:/TS/db ksey/torrserver
+docker run --name torrserver -e TZ=Europe/Moscow -d --restart=unless-stopped --net=host -v /torrserver/db:/TS/db ksey/torrserver
 ```
