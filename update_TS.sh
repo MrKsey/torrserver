@@ -36,11 +36,11 @@ if [ ! -z "$BIP_URL" ]; then
     
     bip_size=$(wc -l bip.txt | cut -f 1 -d ' ')
     if [ $bip_size -gt 0 ]; then
-        cp -f /TS/updates/bip.txt /TS/db/bip.txt
-        chmod a+r /TS/db/bip.txt
+        cp -f /TS/updates/bip.txt $TS_CONF_PATH/bip.txt
+        chmod a+r $TS_CONF_PATH/bip.txt
         echo "New bip.txt size: $bip_size strings. Restarting TorrServer..."
         pkill TorrServer
-        /TS/TorrServer --path=/TS/db/ --port=$TS_PORT $TS_OPTIONS &
+        /TS/TorrServer --path=$TS_CONF_PATH/ --port=$TS_PORT $TS_OPTIONS &
     else
         echo "Error updating blacklist ip from URL - $BIP_URL"
     fi
@@ -63,23 +63,23 @@ if [ $? -eq 0 -a ! -z "$updated_ver" ]; then
     current_ver=$(/TS/TorrServer --version)
     if [ "$updated_ver" != "$current_ver" ]; then
         echo "Updating to $updated_ver ..."
-        if [ ! -d /TS/db/backup ]; then
-            mkdir -p /TS/db/backup
+        if [ ! -d $TS_CONF_PATH/backup ]; then
+            mkdir -p $TS_CONF_PATH/backup
         else
-            [ -e /TS/db/backup/TorrServer ] && rm -f /TS/db/backup/TorrServer
+            [ -e $TS_CONF_PATH/backup/TorrServer ] && rm -f $TS_CONF_PATH/backup/TorrServer
         fi 
         pkill TorrServer
-        cp -f /TS/TorrServer /TS/db/backup/
+        cp -f /TS/TorrServer $TS_CONF_PATH/backup/
         cp -f /TS/updates/TorrServer /TS/TorrServer
         chmod a+x /TS/TorrServer
-        /TS/TorrServer --path=/TS/db/ --port=$TS_PORT $TS_OPTIONS &
+        /TS/TorrServer --path=$TS_CONF_PATH/ --port=$TS_PORT $TS_OPTIONS &
         sleep 5
         if [ `ps | grep TorrServer | wc -w` -eq 0 ]; then
             echo "Error during the update process: downloaded file is corrupted. Restoring backup."
             rm -f /TS/TorrServer
-            cp -f /TS/db/backup/TorrServer /TS/TorrServer
+            cp -f $TS_CONF_PATH/backup/TorrServer /TS/TorrServer
             chmod a+x /TS/TorrServer
-            /TS/TorrServer --path=/TS/db/ --port=$TS_PORT $TS_OPTIONS &
+            /TS/TorrServer --path=$TS_CONF_PATH/ --port=$TS_PORT $TS_OPTIONS &
         fi
     else
         echo "Version $current_ver is latest. No update needed."
