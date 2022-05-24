@@ -2,25 +2,25 @@
 
 # Configuration file ts.ini source. Do not change!
 export INI_URL="https://raw.githubusercontent.com/MrKsey/torrserver/main/ts.ini"
-if [ ! -e /TS/db/ts.ini ]; then
-    wget -q --no-check-certificate --user-agent="$USER_AGENT" --content-disposition "$INI_URL" -O /TS/db/ts.ini
-    if [ -e /TS/db/ts.ini ]; then
+if [ ! -e $TS_CONF_PATH/ts.ini ]; then
+    wget -q --no-check-certificate --user-agent="$USER_AGENT" --content-disposition "$INI_URL" -O $TS_CONF_PATH/ts.ini
+    if [ -e $TS_CONF_PATH/ts.ini ]; then
         echo " "
         echo "============================================="
-        echo "$(date): File /TS/db/ts.ini downloaded from the github."
+        echo "$(date): File $TS_CONF_PATH/ts.ini downloaded from the github."
         echo "============================================="
         echo " "
     fi
 fi
 
-if [ -e /TS/db/ts.ini ]; then
-    chmod a+r /TS/db/ts.ini
-    sed -i -e "s/\r//g" /TS/db/ts.ini
-    . /TS/db/ts.ini && export $(grep --regexp ^[a-zA-Z] /TS/db/ts.ini | cut -d= -f1)
+if [ -e $TS_CONF_PATH/ts.ini ]; then
+    chmod a+r $TS_CONF_PATH/ts.ini
+    sed -i -e "s/\r//g" $TS_CONF_PATH/ts.ini
+    . $TS_CONF_PATH/ts.ini && export $(grep --regexp ^[a-zA-Z] $TS_CONF_PATH/ts.ini | cut -d= -f1)
     echo "============================================="
     echo "$(date): Configuration settings from ts.ini file:"
     echo " "
-    echo "$(cat /TS/db/ts.ini | grep --regexp ^[a-zA-Z])"
+    echo "$(cat $TS_CONF_PATH/ts.ini | grep --regexp ^[a-zA-Z])"
     echo " "
     echo "============================================="
     echo " "
@@ -28,12 +28,12 @@ fi
 
 # File accs.db source. Do not change!
 export ACCS_URL="https://raw.githubusercontent.com/MrKsey/torrserver/main/accs.db"
-if [ ! -e /TS/db/accs.db ]; then
-    wget -q --no-check-certificate --user-agent="$USER_AGENT" --content-disposition "$ACCS_URL" -O /TS/db/accs.db
-    if [ -e /TS/db/accs.db ]; then
+if [ ! -e $TS_CONF_PATH/accs.db ]; then
+    wget -q --no-check-certificate --user-agent="$USER_AGENT" --content-disposition "$ACCS_URL" -O $TS_CONF_PATH/accs.db
+    if [ -e $TS_CONF_PATH/accs.db ]; then
         echo " "
         echo "============================================="
-        echo "$(date): File /TS/db/accs.db downloaded from the github."
+        echo "$(date): File $TS_CONF_PATH/accs.db downloaded from the github."
         echo "============================================="
         echo " "
     fi
@@ -59,17 +59,17 @@ echo " "
 echo "============================================="
 echo "$(date): Starting TorrServer ..."
 echo " "
-/TS/TorrServer --path=/TS/db/ --port=$TS_PORT $TS_OPTIONS &
+/TS/TorrServer --path=$TS_CONF_PATH/ --port=$TS_PORT $TS_OPTIONS &
 sleep 5
 if [ `ps | grep TorrServer | wc -w` -eq 0 ]; then
     echo "Current TorrServer file is corrupted or invalid options. Trying to recover."
-    /TS/TorrServer --path=/TS/db/ --port=$TS_PORT&
+    /TS/TorrServer --path=$TS_CONF_PATH/ --port=$TS_PORT &
     if [ `ps | grep TorrServer | wc -w` -eq 0 ]; then
-        if [ -e /TS/db/backup/TorrServer ]; then
+        if [ -e $TS_CONF_PATH/backup/TorrServer ]; then
             rm -f /TS/TorrServer
-            cp -f /TS/db/backup/TorrServer /TS/TorrServer
+            cp -f $TS_CONF_PATH/backup/TorrServer /TS/TorrServer
             chmod a+x /TS/TorrServer
-            /TS/TorrServer --path=/TS/db/ --port=$TS_PORT&
+            /TS/TorrServer --path=$TS_CONF_PATH/ --port=$TS_PORT &
             sleep 5
             if [ `ps | grep TorrServer | wc -w` -eq 0 ]; then
                 echo "Fatal error!!!"
