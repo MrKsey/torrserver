@@ -39,6 +39,19 @@ if [ ! -e $TS_CONF_PATH/accs.db ]; then
     fi
 fi
 
+# File config.db source. Do not change!
+export CONFIG_URL="https://raw.githubusercontent.com/MrKsey/torrserver/main/config.db"
+if [ ! -e $TS_CONF_PATH/config.db ]; then
+    wget -q --no-check-certificate --user-agent="$USER_AGENT" --content-disposition "$CONFIG_URL" -O $TS_CONF_PATH/config.db
+    if [ -e $TS_CONF_PATH/config.db ]; then
+        echo " "
+        echo "============================================="
+        echo "$(date): File $TS_CONF_PATH/config.db downloaded from the github."
+        echo "============================================="
+        echo " "
+    fi
+fi
+
 # Cleanup env settings
 if [ -e /TS/cron.env ]; then
     rm -f /TS/cron.env
