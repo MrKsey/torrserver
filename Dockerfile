@@ -44,7 +44,6 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 HEALTHCHECK --interval=5s --timeout=10s --retries=3 CMD curl -sS 127.0.0.1:$TS_PORT || exit 1
 
 VOLUME [ "$TS_CONF_PATH" ]
-VOLUME [ "$TS_TORR_DIR" ]
 
 EXPOSE "$TS_PORT"
 
