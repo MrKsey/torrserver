@@ -13,6 +13,8 @@ ENV TS_RELEASE="latest"
 ENV TS_PORT="8090"
 ENV TS_UPDATE="true"
 ENV LINUX_UPDATE="true"
+ENV TS_CONF_PATH=/TS/db
+ENV TS_TORR_DIR=/TS/downloads
 
 ENV GIT_URL=https://api.github.com/repos/YouROK/TorrServer/releases
 ENV USER_AGENT="Mozilla/5.0 (X11; Linux x86_64; rv:77.0) Gecko/20100101 Firefox/77.0"
@@ -28,7 +30,8 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 && apt-get update && apt-get upgrade -y \
 && apt-get install --no-install-recommends -y ca-certificates tzdata wget curl procps cron file jq \
 && apt-get clean \
-&& mkdir -p /TS/db && chmod -R 666 /TS/db \
+&& mkdir -p $TS_CONF_PATH && chmod -R 666 $TS_CONF_PATH \
+&& mkdir -p $TS_TORR_DIR && chmod -R 666 $TS_TORR_DIR \
 && wget --no-check-certificate --user-agent="$USER_AGENT" --no-verbose --output-document=/TS/TorrServer --tries=3 $(curl -s $TS_URL | \
    egrep -o 'http.+\w+' | \
    grep -i "$(uname)" | \
@@ -39,7 +42,8 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 
 HEALTHCHECK --interval=5s --timeout=10s --retries=3 CMD curl -sS 127.0.0.1:$TS_PORT || exit 1
 
-VOLUME [ "/TS/db" ]
+VOLUME [ "$TS_CONF_PATH" ]
+VOLUME [ "$TS_TORR_DIR" ]
 
 EXPOSE "$TS_PORT"
 
