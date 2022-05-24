@@ -59,17 +59,17 @@ echo " "
 echo "============================================="
 echo "$(date): Starting TorrServer ..."
 echo " "
-/TS/TorrServer --path=$TS_CONF_PATH/ --torrentsdir=$TS_TORR_DIR --port=$TS_PORT $TS_OPTIONS &
+/TS/TorrServer --path=$TS_CONF_PATH/ --torrentsdir $TS_TORR_DIR --port=$TS_PORT $TS_OPTIONS &
 sleep 5
 if [ `ps | grep TorrServer | wc -w` -eq 0 ]; then
     echo "Current TorrServer file is corrupted or invalid options. Trying to recover."
-    /TS/TorrServer --path=$TS_CONF_PATH/ --torrentsdir=$TS_TORR_DIR --port=$TS_PORT &
+    /TS/TorrServer --path=$TS_CONF_PATH/ --torrentsdir $TS_TORR_DIR --port=$TS_PORT &
     if [ `ps | grep TorrServer | wc -w` -eq 0 ]; then
         if [ -e $TS_CONF_PATH/backup/TorrServer ]; then
             rm -f /TS/TorrServer
             cp -f $TS_CONF_PATH/backup/TorrServer /TS/TorrServer
             chmod a+x /TS/TorrServer
-            /TS/TorrServer --path=$TS_CONF_PATH/ --torrentsdir=$TS_TORR_DIR --port=$TS_PORT &
+            /TS/TorrServer --path=$TS_CONF_PATH/ --torrentsdir $TS_TORR_DIR --port=$TS_PORT &
             sleep 5
             if [ `ps | grep TorrServer | wc -w` -eq 0 ]; then
                 echo "Fatal error!!!"
