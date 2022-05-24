@@ -30,6 +30,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 && apt-get update && apt-get upgrade -y \
 && apt-get install --no-install-recommends -y ca-certificates tzdata wget curl procps cron file jq \
 && apt-get clean \
+&& mkdir /TS && chmod -R 666 /TS \
 && mkdir -p $TS_CONF_PATH && chmod -R 666 $TS_CONF_PATH \
 && mkdir -p $TS_TORR_DIR && chmod -R 666 $TS_TORR_DIR \
 && wget --no-check-certificate --user-agent="$USER_AGENT" --no-verbose --output-document=/TS/TorrServer --tries=3 $(curl -s $TS_URL | \
