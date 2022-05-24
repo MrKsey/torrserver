@@ -40,7 +40,7 @@ if [ ! -z "$BIP_URL" ]; then
         chmod a+r $TS_CONF_PATH/bip.txt
         echo "New bip.txt size: $bip_size strings. Restarting TorrServer..."
         pkill TorrServer
-        /TS/TorrServer --path=$TS_CONF_PATH/ --port=$TS_PORT $TS_OPTIONS &
+        /TS/TorrServer --path=$TS_CONF_PATH/ --torrentsdir=$TS_TORR_DIR --port=$TS_PORT $TS_OPTIONS &
     else
         echo "Error updating blacklist ip from URL - $BIP_URL"
     fi
@@ -72,14 +72,14 @@ if [ $? -eq 0 -a ! -z "$updated_ver" ]; then
         cp -f /TS/TorrServer $TS_CONF_PATH/backup/
         cp -f /TS/updates/TorrServer /TS/TorrServer
         chmod a+x /TS/TorrServer
-        /TS/TorrServer --path=$TS_CONF_PATH/ --port=$TS_PORT $TS_OPTIONS &
+        /TS/TorrServer --path=$TS_CONF_PATH/ --torrentsdir=$TS_TORR_DIR --port=$TS_PORT $TS_OPTIONS &
         sleep 5
         if [ `ps | grep TorrServer | wc -w` -eq 0 ]; then
             echo "Error during the update process: downloaded file is corrupted. Restoring backup."
             rm -f /TS/TorrServer
             cp -f $TS_CONF_PATH/backup/TorrServer /TS/TorrServer
             chmod a+x /TS/TorrServer
-            /TS/TorrServer --path=$TS_CONF_PATH/ --port=$TS_PORT $TS_OPTIONS &
+            /TS/TorrServer --path=$TS_CONF_PATH/ --torrentsdir=$TS_TORR_DIR --port=$TS_PORT $TS_OPTIONS &
         fi
     else
         echo "Version $current_ver is latest. No update needed."
