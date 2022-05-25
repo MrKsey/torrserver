@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export PATH=$PATH:$TS_CONF_PATH
+cd $TS_CONF_PATH
 
 # Folder for disk cache
 [ ! -d "$TS_TORR_DIR" ] && mkdir -p $TS_TORR_DIR && chmod -R 666 $TS_TORR_DIR
