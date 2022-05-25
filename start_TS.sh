@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Folder for disk cache
-[ ! -d "$TS_TORR_DIR" ] && mkdir -p $TS_TORR_DIR && chmod -R 666 $TS_TORR_DIR
+[ ! -d "$TS_TORR_DIR" ] && mkdir -p $TS_TORR_DIR && chmod -R 777 $TS_TORR_DIR
 ln -s $TS_TORR_DIR /torrents
 
 # Configuration file ts.ini source. Do not change!
