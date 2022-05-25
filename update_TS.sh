@@ -67,7 +67,8 @@ if [ $? -eq 0 -a ! -z "$updated_ver" ]; then
             mkdir -p $TS_CONF_PATH/backup
         else
             [ -e $TS_CONF_PATH/backup/TorrServer ] && rm -f $TS_CONF_PATH/backup/TorrServer
-        fi 
+        fi
+        cd $TS_CONF_PATH
         pkill TorrServer
         cp -f /TS/TorrServer $TS_CONF_PATH/backup/
         cp -f /TS/updates/TorrServer /TS/TorrServer
