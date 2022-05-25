@@ -2,6 +2,7 @@
 
 # Folder for disk cache
 [ ! -d "$TS_TORR_DIR" ] && mkdir -p $TS_TORR_DIR && chmod -R 666 $TS_TORR_DIR
+ln -s $TS_TORR_DIR /torrents
 
 # Configuration file ts.ini source. Do not change!
 export INI_URL="https://raw.githubusercontent.com/MrKsey/torrserver/main/ts.ini"
@@ -75,7 +76,6 @@ echo " "
 echo "============================================="
 echo "$(date): Starting TorrServer ..."
 echo " "
-cd $TS_TORR_DIR
 /TS/TorrServer --path=$TS_CONF_PATH/ --torrentsdir=$TS_TORR_DIR --port=$TS_PORT $TS_OPTIONS &
 sleep 5
 if [ `ps | grep TorrServer | wc -w` -eq 0 ]; then
