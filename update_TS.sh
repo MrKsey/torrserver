@@ -40,6 +40,7 @@ if [ ! -z "$BIP_URL" ]; then
         chmod a+r $TS_CONF_PATH/bip.txt
         echo "New bip.txt size: $bip_size strings. Restarting TorrServer..."
         pkill TorrServer
+        cd $TS_TORR_DIR
         /TS/TorrServer --path=$TS_CONF_PATH/ --torrentsdir=$TS_TORR_DIR --port=$TS_PORT $TS_OPTIONS &
     else
         echo "Error updating blacklist ip from URL - $BIP_URL"
@@ -68,11 +69,11 @@ if [ $? -eq 0 -a ! -z "$updated_ver" ]; then
         else
             [ -e $TS_CONF_PATH/backup/TorrServer ] && rm -f $TS_CONF_PATH/backup/TorrServer
         fi
-        cd $TS_CONF_PATH
         pkill TorrServer
         cp -f /TS/TorrServer $TS_CONF_PATH/backup/
         cp -f /TS/updates/TorrServer /TS/TorrServer
         chmod a+x /TS/TorrServer
+        cd $TS_TORR_DIR
         /TS/TorrServer --path=$TS_CONF_PATH/ --torrentsdir=$TS_TORR_DIR --port=$TS_PORT $TS_OPTIONS &
         sleep 5
         if [ `ps | grep TorrServer | wc -w` -eq 0 ]; then
