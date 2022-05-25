@@ -12,7 +12,7 @@ ENV TS_UPDATE="true"
 ENV LINUX_UPDATE="true"
 
 ENV TS_CONF_PATH=/TS/db
-ENV TS_TORR_DIR=/torrents
+ENV TS_TORR_DIR=/TS/db/torrents
 
 ENV GIT_URL=https://api.github.com/repos/YouROK/TorrServer/releases
 ENV USER_AGENT="Mozilla/5.0 (X11; Linux x86_64; rv:77.0) Gecko/20100101 Firefox/77.0"
@@ -30,7 +30,6 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 && apt-get clean \
 && mkdir /TS && chmod -R 666 /TS \
 && mkdir -p $TS_CONF_PATH && chmod -R 666 $TS_CONF_PATH \
-&& mkdir -p $TS_TORR_DIR && chmod -R 666 $TS_TORR_DIR \
 && wget --no-check-certificate --user-agent="$USER_AGENT" --no-verbose --output-document=/TS/TorrServer --tries=3 $(curl -s $TS_URL | \
    egrep -o 'http.+\w+' | \
    grep -i "$(uname)" | \
