@@ -2,9 +2,6 @@
 # This is unofficial dockerized precompiled TorrServer
 #
 
-# For new library glibc >=2.32 use Ubuntu Groovy or newer
-# FROM ubuntu:groovy
-# FROM debian:stable-slim
 FROM ubuntu:latest
 MAINTAINER Bob <kcey@mail.ru>
 
@@ -13,8 +10,9 @@ ENV TS_RELEASE="latest"
 ENV TS_PORT="8090"
 ENV TS_UPDATE="true"
 ENV LINUX_UPDATE="true"
+
 ENV TS_CONF_PATH=/TS/db
-ENV TS_TORR_DIR=/TS/downloads
+ENV TS_TORR_DIR=/TS/db/torrents
 
 ENV GIT_URL=https://api.github.com/repos/YouROK/TorrServer/releases
 ENV USER_AGENT="Mozilla/5.0 (X11; Linux x86_64; rv:77.0) Gecko/20100101 Firefox/77.0"
