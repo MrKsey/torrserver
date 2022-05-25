@@ -73,7 +73,6 @@ if [ $? -eq 0 -a ! -z "$updated_ver" ]; then
         cp -f /TS/TorrServer $TS_CONF_PATH/backup/
         cp -f /TS/updates/TorrServer /TS/TorrServer
         chmod a+x /TS/TorrServer
-        cd $TS_TORR_DIR
         /TS/TorrServer --path=$TS_CONF_PATH/ --torrentsdir=$TS_TORR_DIR --port=$TS_PORT $TS_OPTIONS &
         sleep 5
         if [ `ps | grep TorrServer | wc -w` -eq 0 ]; then
