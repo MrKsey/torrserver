@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Folder for disk cache
+[ ! -d "$TS_TORR_DIR" ] mkdir -p $TS_TORR_DIR && chmod -R 666 $TS_TORR_DIR
+
 # Configuration file ts.ini source. Do not change!
 export INI_URL="https://raw.githubusercontent.com/MrKsey/torrserver/main/ts.ini"
 if [ ! -e $TS_CONF_PATH/ts.ini ]; then
