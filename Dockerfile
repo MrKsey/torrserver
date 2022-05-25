@@ -30,7 +30,6 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 && apt-get clean \
 && mkdir /TS && chmod -R 666 /TS \
 && mkdir -p $TS_CONF_PATH && chmod -R 666 $TS_CONF_PATH \
-&& mkdir -p $TS_TORR_DIR && chmod -R 666 $TS_TORR_DIR \
 && wget --no-check-certificate --user-agent="$USER_AGENT" --no-verbose --output-document=/TS/TorrServer --tries=3 $(curl -s $TS_URL | \
    egrep -o 'http.+\w+' | \
    grep -i "$(uname)" | \
