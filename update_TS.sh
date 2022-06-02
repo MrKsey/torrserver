@@ -10,6 +10,26 @@ fi
 [ -d /TS/updates ] && rm -r /TS/updates
 mkdir -p /TS/updates
 
+
+# Start checking for ffprobe updates
+echo " "
+echo "=================================================="
+echo "$(date): Start checking for ffprobe updates ..."
+
+wget --no-verbose --no-check-certificate --user-agent="$USER_AGENT" --output-document=/tmp/ffprobe.zip --tries=3 $(\
+curl -s $FFBINARIES | jq '.bin | .[].ffprobe' | grep linux | \
+grep -i -E "$(dpkg --print-architecture | sed "s/amd64/linux-64/g" | sed "s/arm64/linux-arm-64/g" | sed -E "s/armhf/linux-armhf-32/g")" | jq -r)
+unzip -x -o /tmp/ffprobe.zip ffprobe -d /usr/local/bin
+chmod -R +x /usr/local/bin
+echo " "
+ffprobe -version
+echo " "
+echo "Finished checking for ffprobe updates."
+echo "=================================================="
+echo " "
+
+
+# Start checking for blacklist ip updates
 if [ ! -z "$BIP_URL" ]; then
     echo " "
     echo "=================================================="
@@ -45,11 +65,13 @@ if [ ! -z "$BIP_URL" ]; then
     else
         echo "Error updating blacklist ip from URL - $BIP_URL"
     fi
-    echo "Finished checking for updates."
+    echo "Finished checking for blacklist ip updates."
     echo "=================================================="
     echo " "
 fi
 
+
+# Start checking for TorrServer updates
 echo " "
 echo "=================================================="
 echo "$(date): Start checking for TorrServer updates ..."
