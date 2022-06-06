@@ -2,7 +2,7 @@
 
 # Folder for disk cache
 [ ! -d "$TS_TORR_DIR" ] && mkdir -p $TS_TORR_DIR && chmod -R 777 $TS_TORR_DIR
-ln -s $TS_TORR_DIR /torrents
+ln -s $TS_TORR_DIR /torrents && rm $TS_TORR_DIR/torrents
 
 # Configuration file ts.ini source. Do not change!
 export INI_URL="https://raw.githubusercontent.com/MrKsey/torrserver/main/ts.ini"
