@@ -1,0 +1,12 @@
+version: "3"
+services:
+  torrserver:
+    build:
+      context: .
+    container_name: "torrserver"
+    restart: unless-stopped
+    environment:
+      TZ: "America/Montreal"
+      cron_task: "0 9 * * *"
+    ports:
+      - "9666:8090"

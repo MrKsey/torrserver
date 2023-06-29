@@ -24,3 +24,18 @@ More info:
 ```
 docker run --name torrserver -e TZ=Europe/Moscow -d --restart=unless-stopped --net=host -v /torrserver/db:/TS/db ksey/torrserver
 ```
+or test it with docker-compose file
+```
+version: "3"
+services:
+  torrserver:
+    build:
+      context: .
+    container_name: "torrserver"
+    restart: unless-stopped
+    environment:
+      TZ: "Europe/Moscow"
+      cron_task: "0 9 * * *"
+    ports:
+      - "8090:8090"
+```
